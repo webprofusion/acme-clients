@@ -1,30 +1,33 @@
 {
-  "title":"ACME Clients",
-  "description":"",
+  "title": "ACME Clients",
+  "description": "",
   "ui": [
     {
       "title": "Certify The Web",
+      "description": "Professional Certificate Management UI for Windows and IIS.",
       "website": "https://certifytheweb.com",
       "source": "https://github.com/webprofusion/certify",
       "docs": "https://docs.certifytheweb.com/",
       "community": "https://community.certifytheweb.com/",
       "categories": [
-        "UI",
-        "Command Line",
-        "API",
-        "Commercial",
-        "Tools"
+        "ui",
+        "commandline",
+        "api",
+        "supported",
+        "management"
       ],
       "os": [
         "windows",
         "linux",
         "macOS"
       ],
-      "badges":["https://img.shields.io/github/stars/webprofusion/certify"]
+      "badges": [
+        "https://img.shields.io/github/stars/webprofusion/certify",
+        "https://img.shields.io/github/last-commit/webprofusion/certify"
+      ]
     }
-   
   ],
-  "tools":[
+  "tools": [
     {
       "title": "Certbot",
       "website": "https://certbot.eff.org/",
@@ -32,33 +35,65 @@
       "docs": "https://eff-certbot.readthedocs.io/",
       "community": "https://community.letsencrypt.org/",
       "categories": [
-        "Command Line",
-        "Tools"
+        "commandline",
+        "tools",
+        "python"
       ],
       "os": [
         "windows",
         "linux",
         "macOS"
       ],
-      "badges":["https://img.shields.io/github/stars/certbot/certbot"]
+      "badges": [
+        "https://img.shields.io/github/stars/certbot/certbot",
+        "https://img.shields.io/github/last-commit/certbot/certbot"
+      ]
     },
     {
       "title": "Posh-ACME",
-      "website": "hhttps://certbot.eff.org/",
-      "description":"A PowerShell module and ACME client to create publicly trusted SSL/TLS certificates from an ACME capable certificate authority.",
+      "website": "https://poshac.me/",
+      "description": "A PowerShell module and ACME client to create publicly trusted SSL/TLS certificates from an ACME capable certificate authority.",
       "source": "https://github.com/rmbolger/Posh-ACME",
       "community": "https://poshac.me/",
       "categories": [
-        "Command Line",
-        "Tools",
-        "PowerShell"
+        "commandline",
+        "tools",
+        "powershell"
       ],
       "os": [
         "windows",
         "linux",
         "macOS"
       ],
-      "badges":["https://img.shields.io/github/stars/rmbolger/Posh-ACME"]
+      "badges": [
+        "https://img.shields.io/github/stars/rmbolger/Posh-ACME",
+        "https://img.shields.io/github/last-commit/rmbolger/Posh-ACME"
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "title": "Caddy",
+      "description": "Fast, multi-platform web server with automatic HTTPS",
+      "website": "https://caddyserver.com/",
+      "source": "https://github.com/caddyserver/caddy",
+      "docs": "https://caddyserver.com/docs/",
+      "community": "https://caddy.community/",
+      "categories": [
+        "commandline",
+        "webserver",
+        "integration"
+      ],
+      "os": [
+        "windows",
+        "linux",
+        "macOS"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/caddyserver/caddy",
+        "https://img.shields.io/github/last-commit/caddyserver/caddy"
+        
+      ]
     }
   ]
 }
