@@ -1,6 +1,6 @@
-# ACME Clients 🌬️
+# ACME Clients
 
-This is a resource to extensively document the available ACME Client options.
+This is a site to extensively document the available ACME Client options.
 
 https://acmeclients.com
 
