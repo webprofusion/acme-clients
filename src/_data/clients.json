@@ -116,7 +116,8 @@
       "website": "https://poshac.me/",
       "description": "A PowerShell module and ACME client to create publicly trusted SSL/TLS certificates from an ACME capable certificate authority.",
       "source": "https://github.com/rmbolger/Posh-ACME",
-      "community": "https://poshac.me/",
+      "docs": "https://poshac.me/",
+      "community": "https://github.com/rmbolger/Posh-ACME/issues",
       "frequentlyused": true,
       "categories": [
         "commandline",
