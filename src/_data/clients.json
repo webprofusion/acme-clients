@@ -25,9 +25,7 @@
         "wpf"
       ],
       "os": [
-        "windows",
-        "linux",
-        "macOS"
+        "windows"
       ],
       "badges": [
         "https://img.shields.io/github/stars/webprofusion/certify",
