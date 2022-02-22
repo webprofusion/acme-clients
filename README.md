@@ -1,6 +1,6 @@
 # ACME Clients
 
-This is a site to extensively document the most popular (and maintained) ACME Client options across multiple operating systems and technologies.
+Documenting the most popular (and maintained) ACME Client options across multiple operating systems and technologies.
 
 https://acmeclients.com
 
