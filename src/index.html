@@ -7,18 +7,18 @@ layout: default
     <h1 class="my-4 text-center text-3xl font-bold leading-tight text-slate-500 md:text-left md:text-5xl">
       ACME Clients
     </h1>
-    <p class="mb-6  text-base leading-normal ">A dedicated resource to help you find the right ACME client option to meet your requirements.</p>
+    <p class="mb-6  text-base leading-normal ">A dedicated resource to help you find the right ACME client option to meet your requirements from a broad selection of popular tools.</p>
 
     <h2 class="mb-2 text-slate-600">What is an ACME client?</h2>
     <p>An ACME client is any software which can talk to an ACME (Automatic Certificate Management Environment) enabled Certificate Authority (such as Let’s Encrypt, BuyPass Go, ZeroSSL etc). Some are tools designed to be used by end-users to order and manage certificates, some are integrations into other services (such as a built-in feature in a web hosting product).</p>
-    <p class="mt-2">To submit edits to the information listed here, see our <a href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a></p>
-    <p class="mt-2">Jump to: <a class="hover:text-slate-400" href="#user-interfaces">User Interfaces</a>, <a class="hover:text-slate-400" href="#commandline">Command Line Tools and Scripts</a>, <a class="hover:text-slate-400" href="#integrations">Products with Integrated ACME support</a></p>
+    <p class="mt-2">To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a></p>
+    <p class="mt-2">Jump to: <a class="font-bold hover:text-slate-400" href="#user-interfaces">Desktop & Web User Interfaces</a>, <a class="font-bold hover:text-slate-400" href="#commandline">Command Line Tools and Scripts</a>, <a class="font-bold hover:text-slate-400" href="#integrations">Products with Integrated ACME support</a></p>
     
-    <p class="mt-2 break-before-auto">All of the following clients support the ACME v2 API (RFC 8555).</p>
+    <p class="mt-2 break-before-auto">All of the clients listed here support the ACME v2 API (RFC 8555), are <abbr title="Project is recently updated (within 1 year)">actively maintained</abbr> and are <abbr title="Project can demonstrate an engaged community or hundreds of users">frequently used</abbr>.</p>
 
   </header>
 
-  {% include 'tools.njk', title:'User Interfaces', sectionid:'user-interfaces', list:clients.ui %}
+  {% include 'tools.njk', title:'Desktop & Web User Interfaces', sectionid:'user-interfaces', list:clients.ui %}
 
   {% include 'tools.njk', title:'Command Line Tools and Scripts', sectionid:'commandline', list:clients.tools %}
 

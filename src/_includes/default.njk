@@ -35,6 +35,16 @@
     <title>{{ title or metadata.title }}</title>
 
     <link rel="stylesheet" href="{{ '/site.css' | url }}" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQB5CEFH0T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VQB5CEFH0T');
+    </script>
   </head>
 
   <body class="font-sans leading-normal tracking-normal text-gray-900">

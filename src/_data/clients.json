@@ -4,17 +4,26 @@
   "ui": [
     {
       "title": "Certify The Web",
-      "description": "Professional Certificate Management UI for Windows and IIS.",
+      "description": "Professional Automated Certificate Management UI for Windows servers, including direct support for IIS and a wide range of deployment tasks.",
       "website": "https://certifytheweb.com",
       "source": "https://github.com/webprofusion/certify",
       "docs": "https://docs.certifytheweb.com/",
       "community": "https://community.certifytheweb.com/",
+      "commercial": true,
+      "helpdesk": true,
+      "frequentlyused": true,
       "categories": [
         "ui",
+        "desktop",
         "commandline",
         "api",
         "supported",
         "management"
+      ],
+      "tech": [
+        ".net",
+        "c#",
+        "wpf"
       ],
       "os": [
         "windows",
@@ -29,15 +38,44 @@
   ],
   "tools": [
     {
+      "title": "acme.sh",
+      "website": "https://acme.sh",
+      "source": "https://github.com/acmesh-official/acme.sh",
+      "docs": "https://github.com/acmesh-official/acme.sh/wiki",
+      "community": "https://github.com/acmesh-official/acme.sh/issues",
+      "frequentlyused": true,
+      "categories": [
+        "commandline",
+        "tools"
+      ],
+      "tech": [
+        "shell"
+      ],
+      "os": [
+        "windows",
+        "linux",
+        "macOS",
+        "other"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/acmesh-official/acme.sh",
+        "https://img.shields.io/github/last-commit/acmesh-official/acme.sh"
+      ]
+    },
+    {
       "title": "Certbot",
       "website": "https://certbot.eff.org/",
       "source": "https://github.com/certbot/certbot",
       "docs": "https://eff-certbot.readthedocs.io/",
       "community": "https://community.letsencrypt.org/",
+      "frequentlyused": true,
       "categories": [
         "commandline",
-        "tools",
-        "python"
+        "tools"
+      ],
+      "tech": [
+        "python",
+        "powershell"
       ],
       "os": [
         "windows",
@@ -50,14 +88,41 @@
       ]
     },
     {
+      "title": "getssl",
+      "website": "https://github.com/srvrco/getssl",
+      "source": "https://github.com/srvrco/getssl",
+      "docs": "https://github.com/srvrco/getssl/wiki",
+      "community": "https://github.com/srvrco/getssl/issues",
+      "frequentlyused": true,
+      "categories": [
+        "commandline",
+        "tools"
+      ],
+      "tech": [
+        "bash"
+      ],
+      "os": [
+        "linux",
+        "macOS",
+        "other"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/srvrco/getssl",
+        "https://img.shields.io/github/last-commit/srvrco/getssl"
+      ]
+    },
+    {
       "title": "Posh-ACME",
       "website": "https://poshac.me/",
       "description": "A PowerShell module and ACME client to create publicly trusted SSL/TLS certificates from an ACME capable certificate authority.",
       "source": "https://github.com/rmbolger/Posh-ACME",
       "community": "https://poshac.me/",
+      "frequentlyused": true,
       "categories": [
         "commandline",
-        "tools",
+        "tools"
+      ],
+      "tech": [
         "powershell"
       ],
       "os": [
@@ -69,6 +134,30 @@
         "https://img.shields.io/github/stars/rmbolger/Posh-ACME",
         "https://img.shields.io/github/last-commit/rmbolger/Posh-ACME"
       ]
+    },
+    {
+      "title": "win-acme",
+      "website": "https://www.win-acme.com/",
+      "description": "This is a ACMEv2 client for Windows command line.",
+      "docs": "https://www.win-acme.com/reference/cli",
+      "source": "https://github.com/win-acme/win-acme",
+      "community": "https://github.com/win-acme/win-acme/issues",
+      "frequentlyused": true,
+      "categories": [
+        "commandline",
+        "tools"
+      ],
+      "tech": [
+        ".net",
+        "c#"
+      ],
+      "os": [
+        "windows"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/win-acme/win-acme",
+        "https://img.shields.io/github/last-commit/win-acme/win-acme"
+      ]
     }
   ],
   "integrations": [
@@ -79,10 +168,14 @@
       "source": "https://github.com/caddyserver/caddy",
       "docs": "https://caddyserver.com/docs/",
       "community": "https://caddy.community/",
+      "frequentlyused": true,
       "categories": [
         "commandline",
         "webserver",
         "integration"
+      ],
+      "tech": [
+        "go"
       ],
       "os": [
         "windows",
@@ -92,7 +185,6 @@
       "badges": [
         "https://img.shields.io/github/stars/caddyserver/caddy",
         "https://img.shields.io/github/last-commit/caddyserver/caddy"
-        
       ]
     }
   ]
