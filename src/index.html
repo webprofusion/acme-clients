@@ -14,7 +14,9 @@ layout: default
     <p class="mt-2">To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a></p>
     <p class="mt-2">Jump to: <a class="font-bold hover:text-slate-400" href="#user-interfaces">Desktop & Web User Interfaces</a>, <a class="font-bold hover:text-slate-400" href="#commandline">Command Line Tools and Scripts</a>, <a class="font-bold hover:text-slate-400" href="#integrations">Products with Integrated ACME support</a></p>
     
-    <p class="mt-2 break-before-auto">All of the clients listed here support the ACME v2 API (RFC 8555), are <abbr title="Project is recently updated (within 1 year)">actively maintained</abbr> and are <abbr title="Project can demonstrate an engaged community or hundreds of users">frequently used</abbr>.</p>
+    <p class="mt-2 break-before-auto">All of the clients listed here support the ACME v2 API (RFC 8555), are <abbr title="Project is recently updated (within 1 year)">actively maintained</abbr> and are <abbr title="Project can demonstrate an engaged community wth a few hundred users">frequently used</abbr>. 
+    </p>
+    <p class="mt-2 text-sm text-slate-500" >Note: This site is hosted and maintained by the developers of <a target="_blank" href="https://certifytheweb.com">Certify The Web</a></p>
 
   </header>
 
@@ -24,4 +26,5 @@ layout: default
 
   {% include 'tools.njk', title:'Products with Integrated ACME support', sectionid:'integrations',list:clients.integrations %}
 
+  <p class="m-4" >This not an exhaustive list of all ACME clients ever developed. This list does not contain unmaintained, unused or very niche interest projects:  <a target="_blank" href="https://letsencrypt.org/docs/client-options/">see more..</a></p>
 </main>
