@@ -11,7 +11,6 @@
       "community": "https://community.certifytheweb.com/",
       "commercial": true,
       "helpdesk": true,
-      "frequentlyused": true,
       "categories": [
         "ui",
         "desktop",
@@ -43,7 +42,6 @@
       "source": "https://github.com/acmesh-official/acme.sh",
       "docs": "https://github.com/acmesh-official/acme.sh/wiki",
       "community": "https://github.com/acmesh-official/acme.sh/issues",
-      "frequentlyused": true,
       "categories": [
         "commandline",
         "tools"
@@ -68,7 +66,6 @@
       "source": "https://github.com/certbot/certbot",
       "docs": "https://eff-certbot.readthedocs.io/",
       "community": "https://community.letsencrypt.org/",
-      "frequentlyused": true,
       "categories": [
         "commandline",
         "tools"
@@ -93,7 +90,6 @@
       "source": "https://github.com/srvrco/getssl",
       "docs": "https://github.com/srvrco/getssl/wiki",
       "community": "https://github.com/srvrco/getssl/issues",
-      "frequentlyused": true,
       "categories": [
         "commandline",
         "tools"
@@ -112,13 +108,37 @@
       ]
     },
     {
+      "title": "lego",
+      "website": "https://go-acme.github.io/lego/",
+      "description": "A Let's Encrypt/ACME client and library written in Go",
+      "source": "https://github.com/go-acme/lego",
+      "docs": "https://go-acme.github.io/lego/",
+      "community": "https://github.com/go-acme/lego/issues",
+      "categories": [
+        "commandline",
+        "library",
+        "tools"
+      ],
+      "tech": [
+        "go"
+      ],
+      "os": [
+        "docker",
+        "linux",
+        "other"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/go-acme/lego",
+        "https://img.shields.io/github/last-commit/go-acme/lego"
+      ]
+    },
+    {
       "title": "Posh-ACME",
       "website": "https://poshac.me/",
       "description": "A PowerShell module and ACME client to create publicly trusted SSL/TLS certificates from an ACME capable certificate authority.",
       "source": "https://github.com/rmbolger/Posh-ACME",
       "docs": "https://poshac.me/",
       "community": "https://github.com/rmbolger/Posh-ACME/issues",
-      "frequentlyused": true,
       "categories": [
         "commandline",
         "tools"
@@ -143,7 +163,6 @@
       "docs": "https://www.win-acme.com/reference/cli",
       "source": "https://github.com/win-acme/win-acme",
       "community": "https://github.com/win-acme/win-acme/issues",
-      "frequentlyused": true,
       "categories": [
         "commandline",
         "tools"
@@ -169,7 +188,6 @@
       "source": "https://github.com/caddyserver/caddy",
       "docs": "https://caddyserver.com/docs/",
       "community": "https://caddy.community/",
-      "frequentlyused": true,
       "categories": [
         "commandline",
         "webserver",
@@ -186,6 +204,29 @@
       "badges": [
         "https://img.shields.io/github/stars/caddyserver/caddy",
         "https://img.shields.io/github/last-commit/caddyserver/caddy"
+      ]
+    },
+    {
+      "title": "certmanager",
+      "description": "ACME certificate management for Kubernetes and OpenShift",
+      "website": "https://cert-manager.io/",
+      "source": "https://github.com/cert-manager/cert-manager",
+      "docs": "https://cert-manager.io/",
+      "community": "https://groups.google.com/forum/#!forum/cert-manager-dev",
+      "categories": [
+        "commandline",
+        "integration"
+      ],
+      "tech": [
+        "go"
+      ],
+      "os": [
+        "linux",
+        "other"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/cert-manager/cert-manager",
+        "https://img.shields.io/github/last-commit/cert-manager/cert-manager"
       ]
     }
   ]
