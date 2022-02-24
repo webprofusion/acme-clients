@@ -2,13 +2,13 @@
   <a class="text-slate-800" href="#{{sectionid}}">{{ title }}</a>
 </h2>
 
-<div class="container  mx-auto ">
+<div class="container  mr-4 ">
 {{ list | categoryFilter }}
 {% assign filteredList = list | categoryFilter:category %}
 
   {%- for item in filteredList -%}
 
-    <div class="shadow-lg p-2 mt-2 max-w-xl bg-gray-50">
+    <div class="shadow-lg p-2 mt-2 max-w-md bg-gray-50">
       <h3 class="p-2 text-slate-800"><a href="/clients/{{ item.title | slug }}" title="Read more about {{item.title}}">{{ item.title }}</a></h3>
 
       {% if item.summary %}

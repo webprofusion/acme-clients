@@ -2,18 +2,52 @@
   "title": "ACME Clients",
   "description": "acmeclients.com",
   "categories": [
-    {"key":"ui","description":"Tools with a management UI (Desktop or Web based)"},
-    {"key":"desktop","description":"Tools with a desktop UI"},
-    {"key":"cli-optional","description":"Tools with features for  optional command line administration"},
-    {"key":"cli","description":"Tools with a command line interface"},
-    {"key":"api","description":"Tools featuring a management API via http"},
-    {"key":"supported","description":"Tools with dedicated support channels"},
-    {"key":"commercial","description":"Commercially developed/supported tools"},
-    {"key":"integration","description":"Products which integrate ACME as a built-in feature."}
+    {
+      "key": "ui",
+      "description": "Tools with a management UI (Desktop or Web based)"
+    },
+    {
+      "key": "desktop",
+      "description": "Tools with a desktop UI"
+    },
+    {
+      "key": "cli-optional",
+      "description": "Tools with features for  optional command line administration"
+    },
+    {
+      "key": "cli",
+      "description": "Tools with a command line interface"
+    },
+    {
+      "key": "api",
+      "description": "Tools featuring a management API via http"
+    },
+    {
+      "key": "supported",
+      "description": "Tools with dedicated support channels"
+    },
+    {
+      "key": "commercial",
+      "description": "Commercially developed/supported tools"
+    },
+    {
+      "key": "integration",
+      "description": "Products which integrate ACME as a built-in feature."
+    }
   ],
-  "features":[
-    {"key":"multi-auth","description":"Supports combining multiple domain validation configurations when working with a single certificate."},
-    {"key":"custom-csr","description":"Supports using a custom Certificate Signing Request (CSR) generated from an external source."}
+  "features": [
+    {
+      "key": "multi-auth",
+      "description": "Supports combining multiple domain validation configurations when working with a single certificate."
+    },
+    {
+      "key": "multi-ca",
+      "description": "Supports using a different certificate authority per certificate."
+    },
+    {
+      "key": "custom-csr",
+      "description": "Supports using a custom Certificate Signing Request (CSR) generated from an external source."
+    }
   ],
   "list": [
     {
@@ -34,23 +68,25 @@
       "tech": [
         ".net",
         "c#",
-        "wpf"
+        "wpf",
+        "powershell"
       ],
       "os": [
         "windows"
       ],
       "features": [
         "multi-auth",
+        "multi-ca",
         "custom-csr"
       ],
-      "pros":[
+      "pros": [
         "Optimised for Windows users, with built-in support for IIS and the windows certificate store",
         "Registered users have access to dedicated helpdesk ticketing",
         "Support for a wide range of DNS APIs (28+, including many provided via Posh-ACME).",
         "Support multiple auth config (e.g. mixing http and DNS validation, or using multiple DNS providers in one cert)",
         "Extensive range of optional Deployment Tasks to perform scripting or to deploy to Apache, nginx, Azure Key Vault etc"
       ],
-      "cons":[
+      "cons": [
         "Currently only available on Windows",
         "Commercial users require a license after their evaluation."
       ],
@@ -61,7 +97,8 @@
     },
     {
       "title": "acme.sh",
-      "summary":"Popular acme client written as unix shell script, with minimal dependencies",
+      "summary": "Popular acme client written as unix shell script.",
+      "description": "Unlike many other popular clients (which tend to default to using Let's Encrypt), acme.sh defaults to the ZeroSSL certificate authority for certificate orders.",
       "website": "https://acme.sh",
       "source": "https://github.com/acmesh-official/acme.sh",
       "docs": "https://github.com/acmesh-official/acme.sh/wiki",
@@ -78,15 +115,18 @@
         "macOS",
         "other"
       ],
-      "pros":[
-        "Optimised for Linux",
-        "Minimial dependencies",
-        "Support for a good range of DNS APIs (external dependencies required)."
+      "pros": [
+        "Optimized for Linux and other unix-like systems, broad compatibility",
+        "Minimal dependencies",
+        "Support for a range of DNS APIs (external dependencies required)."
       ],
-      "cons":[
+      "cons": [
         "Only limited support for Windows (requires Cygwin or other compatible shells etc)",
-        "Lacks dedicated support community",
+        "Lacks a dedicated support community",
         "No automated update notifications"
+      ],
+      "features": [
+        "custom-csr"
       ],
       "badges": [
         "https://img.shields.io/github/stars/acmesh-official/acme.sh",
@@ -95,8 +135,8 @@
     },
     {
       "title": "Certbot",
-      "summary":"The official ACME client recommended by Let's Encrypt.",
-      "description":"Certbot is a Python based command line tool with native support for Apache and nginx. Support is provided via the Let's Encrypt community site.",
+      "summary": "The official ACME client recommended by Let's Encrypt.",
+      "description": "Certbot is a Python based command line tool with native support for Apache and nginx. Support is provided via the Let's Encrypt community site.",
       "website": "https://certbot.eff.org/",
       "source": "https://github.com/certbot/certbot",
       "docs": "https://eff-certbot.readthedocs.io/",
@@ -105,20 +145,19 @@
         "cli"
       ],
       "tech": [
-        "python",
-        "powershell"
+        "python"
       ],
       "os": [
         "windows",
         "linux",
         "macOS"
       ],
-      "pros":[
+      "pros": [
         "Official ACME tool recommended by Let's Encrypt",
-        "Optimised for Linux, with built-in deployment options for Apache and nginx",
+        "Optimized for Linux, with built-in deployment options for Apache and nginx",
         "Support for ~14 DNS APIs for DNS validation"
       ],
-      "cons":[
+      "cons": [
         "Only limited support for Windows (no IIS deployment etc, does not produce/store PFX)",
         "Limited distribution support if not using snap to install"
       ],
@@ -129,6 +168,7 @@
     },
     {
       "title": "getssl",
+      "summary": "A client implemented as a Unix (bash) shell script.",
       "website": "https://github.com/srvrco/getssl",
       "source": "https://github.com/srvrco/getssl",
       "docs": "https://github.com/srvrco/getssl/wiki",
@@ -177,6 +217,7 @@
       "title": "Posh-ACME",
       "website": "https://poshac.me/",
       "summary": "A PowerShell module and ACME client to create publicly trusted SSL/TLS certificates from an ACME capable certificate authority.",
+      "description": "Posh-ACME is PowerShell module providing a set of cmdlets to work with ACME accounts and to order, validate and fetch certificates.",
       "source": "https://github.com/rmbolger/Posh-ACME",
       "docs": "https://poshac.me/",
       "community": "https://github.com/rmbolger/Posh-ACME/issues",
@@ -199,7 +240,7 @@
     {
       "title": "win-acme",
       "website": "https://www.win-acme.com/",
-      "summary": "This is a ACMEv2 client for Windows command line.",
+      "summary": "A client tool for the Windows command line.",
       "docs": "https://www.win-acme.com/reference/cli",
       "source": "https://github.com/win-acme/win-acme",
       "community": "https://github.com/win-acme/win-acme/issues",
@@ -227,7 +268,6 @@
       "community": "https://caddy.community/",
       "categories": [
         "cli",
-        "webserver",
         "integration"
       ],
       "tech": [

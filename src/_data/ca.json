@@ -1,0 +1,129 @@
+{
+  "title": "ACME Certificate Authorities",
+  "description": "acmeclients.com",
+  "categories": [
+    {
+      "key": "ui",
+      "description": "Tools with a management UI (Desktop or Web based)"
+    },
+    {
+      "key": "desktop",
+      "description": "Tools with a desktop UI"
+    },
+    {
+      "key": "cli-optional",
+      "description": "Tools with features for  optional command line administration"
+    },
+    {
+      "key": "cli",
+      "description": "Tools with a command line interface"
+    },
+    {
+      "key": "api",
+      "description": "Tools featuring a management API via http"
+    },
+    {
+      "key": "supported",
+      "description": "Tools with dedicated support channels"
+    },
+    {
+      "key": "commercial",
+      "description": "Commercially developed/supported tools"
+    },
+    {
+      "key": "integration",
+      "description": "Products which integrate ACME as a built-in feature."
+    }
+  ],
+  "features": [
+    {
+      "key": "wildcards",
+      "description": "Supports wildcard certificates e.g. *.domain.com."
+    },
+    {
+      "key": "multi-san",
+      "description": "Supports using a different certificate authority per certificate."
+    },
+    {
+      "key": "90-day",
+      "description": "Supports using a custom Certificate Signing Request (CSR) generated from an external source."
+    }
+  ],
+  "list": [
+    {
+      "title": "Let's Encrypt",
+      "summary": "The most popular ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
+      "website": "https://letsencrypt.org",
+      "community": "https://community.letsencrypt.org/",
+      "status":"https://letsencrypt.status.io/",
+      "features": [
+        "wildcards",
+        "multi-san",
+        "90-day"
+      ],
+      "pros": [
+        "Free (zero cost) certificates",
+        "Active support community"
+      ],
+      "cons": [
+        "Rate limits apply (hard - not user changeable)",
+        "Using an ECDSA-only chain requires opt-in via allow-list"
+      ]
+    },
+    {
+      "title": "ZeroSSL",
+      "summary": "The second most popular ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
+      "description":"The ZeroSSL service is operated by Stack Holdings in Vienna and is related to apilayer.com. They have actively sponsored development of several open-source ACME clients including Caddy and acme.sh.",
+      "website": "https://zerossl.com/",
+      "features": [
+        "wildcards",
+        "multi-san",
+        "90-day"
+      ],
+      "pros": [
+        "Free (zero cost) certificates",
+        "Active support community"
+      ],
+      "cons": [
+        "Rate limits apply (hard - not user changeable)",
+        "No active support community",
+        "Requires external account binding (EAB) for account registration",
+        "Service is currently free, commonly raising questions of how the parent company will eventually monetize the service."
+      ]
+    },
+    {
+      "title": "BuyPass",
+      "summary": "ACME certificate authority, issuing free 180 day certificates with up to 5 subject names.",
+      "website": "https://www.buypass.com/",
+      "features": [
+        "multi-san",
+        "180-day"
+      ],
+      "pros": [
+        "Free (zero cost) certificates",
+        "Longer expiry (180 days) can be useful where deployment automation is limited"        
+      ],
+      "cons": [
+        "Rate limits apply (hard - not user changeable)",
+        "Certificate feature are limited in comparison (SAN limit and no wildcards)"
+      ]
+    },
+    {
+      "title": "SSL.com",
+      "summary": "ACME certificate authority, issuing free 90 day certificates including 1 subject name and a www. variant.",
+      "website": "https://www.ssl.com/",
+      "features": [
+        "90-day"
+      ],
+      "pros": [
+        "Free (zero cost) certificates",
+        "Longer expiry (180 days) can be useful where deployment automation is limited"        
+      ],
+      "cons": [
+        "Requires external account binding (EAB) for account registration",
+        "Rate limits are unknown",
+        "Certificate feature are very limited in comparison (1 domain and no wildcards)"
+      ]
+    }
+  ]
+}

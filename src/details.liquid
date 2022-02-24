@@ -34,27 +34,32 @@ layout: default
     <p class="mt-4 text-slate-400"> Categories:
 
       {%- for c in item.categories -%}
-      <span class="text-slate-400 p-1 rounded bg-slate-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
+      <span class="p-1 rounded bg-slate-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
       {%- endfor -%}
     </p>
 
     <p class="mt-2 text-slate-400">
       Operating Systems:
       {%- for c in item.os -%}
-      <span class="text-sky-400 p-1 rounded bg-gray-200 ml-1 mr-1 lowercase">{{ c }}</span>
+      <span class="text-slate-400 p-1 rounded bg-gray-200 ml-1 mr-1 lowercase">{{ c }}</span>
+      {%- endfor -%}
+    </p>
+
+    <p class="mt-2 text-slate-400">
+      Technology:
+      {%- for c in item.tech -%}
+      <span class="text-slate-400 p-1 rounded bg-gray-50 ml-1 mr-1 lowercase">{{ c }}</span>
       {%- endfor -%}
     </p>
   </div>
 
 
-  <div class="p-4 mt-2 max-w-xxl">
+  <div class="pt-4 pb-4 mt-2 max-w-xxl">
     <p>
       <span title="Website">🏠</span>
       <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}
       </a>
     </p>
-
-
 
     <h3 class="mt-4">Documentation</h3>
     <p>
@@ -69,43 +74,35 @@ layout: default
     </p>
 
     {% if item.pros %}
-
-    <h3 class="mt-4">Pros</h3>
-    <ul class="list-disc ml-8">
-      {%- for c in item.pros -%}
-      <li>{{ c }}</li>
-      {%- endfor -%}
-    </ul>
+      <h3 class="mt-4">Pros</h3>
+      <ul class="list-disc ml-8">
+        {%- for c in item.pros -%}
+        <li>{{ c }}</li>
+        {%- endfor -%}
+      </ul>
     {% endif %}
-    
+
     {% if item.cons %}
-
-    <h3>Cons</h3>
-    <ul class="list-disc ml-8">
-      {%- for c in item.cons -%}
-      <li>{{ c }}</li>
-      {%- endfor -%}
-    </ul>
+      <h3>Cons</h3>
+      <ul class="list-disc ml-8">
+        {%- for c in item.cons -%}
+        <li>{{ c }}</li>
+        {%- endfor -%}
+      </ul>
     {% endif %}
 
-
   </div>
 
-  <p class="pl-2 text-sm">
+  <h3 class="mt-2">Activity</h3>
+  <p class="mt-2">
 
-  <div class="m-2">
+    {%- for b in item.badges -%}
+    <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1" />
+    {%- endfor -%}
+  </p>
 
-
-    <p class="mt-2">
-      Activity: <span title="Activity">😎</span>
-      {%- for b in item.badges -%}
-      <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1" />
-      {%- endfor -%}
-    </p>
-  </div>
-
-
-  <p class="mt-2">To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a>
+  <p class="mt-2">
+    To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a>
   </p>
 
 

@@ -1,0 +1,62 @@
+<h2 class="pt-4 pb-4 drop-shadow-xl" id="{{sectionid}}">
+  <a class="text-slate-800" href="#{{sectionid}}">{{ title }}</a>
+</h2>
+
+<div class="container  mr-4 ">
+
+  {%- for item in list -%}
+
+  <div class="shadow-lg p-2 mt-2  bg-gray-50">
+    <h3 class="p-2 text-slate-800">{{ item.title }}</h3>
+
+    {% if item.summary %}
+    <p class="p-2 text-slate-600">
+      {{ item.summary }} {{item.description}}
+    </p>
+    {% endif %}
+
+    <div class="pl-2 text-sm">
+      <span title="Website">🏠</span>
+      <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}</a>
+
+      {% if item.status %}
+      <br>
+      <span title="Status">🚑</span>
+      <a class="ml-1" href="{{ item.status }}" target="_blank" title="Status">{{item.status}}</a>
+      {% endif %}
+
+      {% if item.community %}
+      <br>
+      <span title="Community">🧑🏿‍💻</span>
+      <a class="ml-1" href="{{ item.community }}" target="_blank" title="Community">{{item.community}}</a>
+      {% endif %}
+
+      <div class="mt-4  ">
+        <div class="w-3/6">
+          {% if item.pros %}
+          <h3>Pros</h3>
+          <ul class="list-disc ml-8">
+            {%- for c in item.pros -%}
+            <li>{{ c }}</li>
+            {%- endfor -%}
+          </ul>
+          {% endif %}
+        </div>
+
+        <div  class="w-3/6"> 
+          {% if item.cons %}
+          <h3>Cons</h3>
+          <ul class="list-disc ml-8">
+            {%- for c in item.cons -%}
+            <li>{{ c }}</li>
+            {%- endfor -%}
+          </ul>
+          {% endif %}
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {%- endfor -%}
+</div>
