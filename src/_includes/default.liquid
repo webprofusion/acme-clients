@@ -32,7 +32,7 @@
     />
     <link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
 
-    <title>{{ title or metadata.title }}</title>
+    <title>{{ metadata.title }}</title>
 
     <link rel="stylesheet" href="{{ '/site.css' | url }}" />
 
@@ -48,6 +48,6 @@
   </head>
 
   <body class="font-sans leading-normal tracking-normal text-gray-900">
-    {{ content | safe }}
+    {{ content  }}
   </body>
 </html>

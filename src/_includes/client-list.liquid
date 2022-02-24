@@ -1,0 +1,56 @@
+<h2 class="pt-4 pb-4 drop-shadow-xl" id="{{sectionid}}">
+  <a class="text-slate-800" href="#{{sectionid}}">{{ title }}</a>
+</h2>
+
+<div class="container  mx-auto ">
+{{ list | categoryFilter }}
+{% assign filteredList = list | categoryFilter:category %}
+
+  {%- for item in filteredList -%}
+
+    <div class="shadow-lg p-2 mt-2 max-w-xl bg-gray-50">
+      <h3 class="p-2 text-slate-800"><a href="/clients/{{ item.title | slug }}" title="Read more about {{item.title}}">{{ item.title }}</a></h3>
+
+      {% if item.summary %}
+        <p class="p-2 text-slate-600">
+          {{ item.summary }}
+        </p>
+      {% endif %}
+
+      <p class="pl-2 text-sm">
+        <span title="Website">🏠</span>
+        <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}
+        </a>
+        <br>
+        <span title="Documentation">📝</span>
+        <a class="ml-1" href="{{ item.docs }}" target="_blank" title="Documentation">{{item.docs}}</a>
+        <br>
+        <span title="Community">🧑🏿‍💻</span>
+        <a class="ml-1" href="{{ item.community }}" target="_blank" title="Community">{{item.community}}</a>
+
+        <div class="m-2">
+          <p>
+            <span title="Categories">🎚️</span>
+            {%- for c in item.categories -%}
+              <span class="text-slate-400 p-1 rounded bg-slate-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
+            {%- endfor -%}
+          </p>
+
+          <p class="mt-2">
+            <span title="Operating Systems">🎮</span>
+            {%- for c in item.os -%}
+              <span class="text-sky-400 p-1 rounded bg-gray-200 ml-1 mr-1 lowercase">{{ c }}</span>
+            {%- endfor -%}
+          </p>
+
+          <p class="mt-2">
+            <span title="Activity">😎</span>
+            {%- for b in item.badges -%}
+              <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1"/>
+            {%- endfor -%}
+          </p>
+        </div>
+      </div>
+
+    {%- endfor -%}
+  </div>

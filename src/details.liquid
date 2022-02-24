@@ -1,0 +1,112 @@
+---
+pagination:
+  data: clients.list
+  size: 1
+  alias: item
+permalink: "clients/{{ item.title | slug }}/"
+layout: default
+---
+<main class="container mx-auto flex flex-col flex-wrap px-2 pt-12">
+  <header class="flex w-full flex-col justify-center overflow-y-hidden lg:items-start xl:w-2/3 pb-4 break-after-auto bg-slate-50 drop-shadow p-4 rounded-md">
+    <h1 class="my-4 text-center text-3xl font-bold leading-tight text-slate-500 md:text-left md:text-5xl">
+      ACME Clients
+    </h1>
+
+  </header>
+
+  <div class="text-sm breadcrumbs">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">ACME Clients</a></li>
+      <li>{{ item.title }}</li>
+    </ul>
+  </div>
+
+  <h2 class="mt-6 text-slate-800">{{item.title}}</h2>
+
+  {% if item.summary %}
+  <p class="pt-2 text-slate-800">
+    {{ item.summary }} {{ item.description }}
+  </p>
+  {% endif %}
+
+  <div class="p-40mt-2 max-w-xxl">
+    <p class="mt-4 text-slate-400"> Categories:
+
+      {%- for c in item.categories -%}
+      <span class="text-slate-400 p-1 rounded bg-slate-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
+      {%- endfor -%}
+    </p>
+
+    <p class="mt-2 text-slate-400">
+      Operating Systems:
+      {%- for c in item.os -%}
+      <span class="text-sky-400 p-1 rounded bg-gray-200 ml-1 mr-1 lowercase">{{ c }}</span>
+      {%- endfor -%}
+    </p>
+  </div>
+
+
+  <div class="p-4 mt-2 max-w-xxl">
+    <p>
+      <span title="Website">🏠</span>
+      <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}
+      </a>
+    </p>
+
+
+
+    <h3 class="mt-4">Documentation</h3>
+    <p>
+      <span title="Documentation">📝</span>
+      <a class="ml-1" href="{{ item.docs }}" target="_blank" title="Documentation">{{item.docs}}</a>
+    </p>
+
+    <h3 class="mt-4">Community</h3>
+    <p>
+      <span title="Community">🧑🏿‍💻</span>
+      <a class="ml-1" href="{{ item.community }}" target="_blank" title="Community">{{item.community}}</a>
+    </p>
+
+    {% if item.pros %}
+
+    <h3 class="mt-4">Pros</h3>
+    <ul class="list-disc ml-8">
+      {%- for c in item.pros -%}
+      <li>{{ c }}</li>
+      {%- endfor -%}
+    </ul>
+    {% endif %}
+    
+    {% if item.cons %}
+
+    <h3>Cons</h3>
+    <ul class="list-disc ml-8">
+      {%- for c in item.cons -%}
+      <li>{{ c }}</li>
+      {%- endfor -%}
+    </ul>
+    {% endif %}
+
+
+  </div>
+
+  <p class="pl-2 text-sm">
+
+  <div class="m-2">
+
+
+    <p class="mt-2">
+      Activity: <span title="Activity">😎</span>
+      {%- for b in item.badges -%}
+      <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1" />
+      {%- endfor -%}
+    </p>
+  </div>
+
+
+  <p class="mt-2">To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a>
+  </p>
+
+
+</main>

@@ -4,8 +4,8 @@ const htmlmin = require("html-minifier");
 module.exports = function (eleventyConfig) {
 
   // custom filter for data lists : https://www.11ty.dev/docs/languages/liquid/#multiple-filter-arguments
-  eleventyConfig.addFilter("categoryFilter", function (items, category) {
-    return items.filter(f => f.categories?.includes(category));
+  eleventyConfig.addFilter("categoryFilter", function (value, category) {
+    return value.filter(v => v.categories.includes(category));
   });
 
   if (process.env.ELEVENTY_PRODUCTION) {

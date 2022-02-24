@@ -11,20 +11,25 @@ layout: default
 
     <h2 class="mb-2 text-slate-600">What is an ACME client?</h2>
     <p>An ACME client is any software which can talk to an ACME (Automatic Certificate Management Environment) enabled Certificate Authority (such as Let’s Encrypt, BuyPass Go, ZeroSSL etc). Some are tools designed to be used by end-users to order and manage certificates, some are integrations into other services (such as a built-in feature in a web hosting product).</p>
-    <p class="mt-2">To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a></p>
-    <p class="mt-2">Jump to: <a href="#user-interfaces">Desktop & Web User Interfaces</a>, <a href="#commandline">Command Line Tools and Scripts</a>, <a href="#integrations">Products with Integrated ACME support</a></p>
-    
-    <p class="mt-2 break-before-auto">All of the clients listed here support the ACME v2 API (RFC 8555), are <abbr title="Project is recently updated (within 1 year)">actively maintained</abbr> and are <abbr title="Project can demonstrate an engaged community wth a few hundred users">frequently used</abbr>. 
+    <p class="mt-2">To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a>
     </p>
-    <p class="mt-2 text-sm text-slate-500" >Note: This site is hosted and maintained by the developers of <a target="_blank" href="https://certifytheweb.com">Certify The Web</a></p>
+    <p class="mt-2">Jump to: <a href="#user-interfaces">Desktop & Web User Interfaces</a>, <a href="#commandline">Command Line Tools and Scripts</a>, <a href="#integrations">Products with Integrated ACME support</a>
+    </p>
+
+    <p class="mt-2 break-before-auto">All of the clients listed here support the ACME v2 API (RFC 8555), are <abbr title="Project is recently updated (within 1 year)">actively maintained</abbr> and are <abbr title="Project can demonstrate an engaged community wth a few hundred users">frequently used</abbr>.
+    </p>
+    <p class="mt-2 text-sm text-slate-500">Note: This site is hosted and maintained by the developers of <a target="_blank" href="https://certifytheweb.com">Certify The Web</a>
+    </p>
 
   </header>
 
-  {% include 'tools.njk', title:'Desktop & Web User Interfaces', sectionid:'user-interfaces', list:clients.ui %}
+  {% include 'client-list', title:'Desktop & Web User Interfaces', sectionid:'user-interfaces', list:clients.list , category:'ui' %}
 
-  {% include 'tools.njk', title:'Command Line Tools and Scripts', sectionid:'commandline', list:clients.tools %}
+  {% include 'client-list',  title: 'Command Line Tools and Scripts',  sectionid: 'cli',  list: clients.list,  category: 'cli' %}
 
-  {% include 'tools.njk', title:'Products with Integrated ACME support', sectionid:'integrations',list:clients.integrations %}
+  {% include 'client-list',  title: 'Products with Integrated ACME support',  sectionid: 'integrations',  list: clients.list,  category: 'integration' %}
 
-  <p class="m-4" >This not an exhaustive list of all ACME clients ever developed. This list does not contain unmaintained, unused or very niche interest projects:  <a target="_blank" href="https://letsencrypt.org/docs/client-options/">see more..</a></p>
+  <p class="m-4">
+    This not an exhaustive list of all ACME clients ever developed. This list does not contain unmaintained, unused or very niche interest projects: <a target="_blank" href="https://letsencrypt.org/docs/client-options/">see more..</a>
+  </p>
 </main>
