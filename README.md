@@ -6,7 +6,7 @@ https://acmeclients.com
 
 This sites use 11ty as a static site (Windty is a basic template using 11ty and Tailwind, and deploys to github pages).
 
-**Edits to the list of documented clients can be be by submitting a PR for main/src/_data/clients.json**
+**Edits to the list of documented clients can be made by submitting a PR for main/src/_data/clients.json**
 
 ## How to Dev/Build
 
