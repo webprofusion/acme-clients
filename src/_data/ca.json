@@ -55,7 +55,7 @@
       "summary": "The most popular ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
       "website": "https://letsencrypt.org",
       "community": "https://community.letsencrypt.org/",
-      "status":"https://letsencrypt.status.io/",
+      "status": "https://letsencrypt.status.io/",
       "features": [
         "wildcards",
         "multi-san",
@@ -73,7 +73,7 @@
     {
       "title": "ZeroSSL",
       "summary": "The second most popular ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
-      "description":"The ZeroSSL service is operated by Stack Holdings in Vienna and is related to apilayer.com. They have actively sponsored development of several open-source ACME clients including Caddy and acme.sh.",
+      "description": "The ZeroSSL service is operated by Stack Holdings in Vienna and is related to apilayer.com. They have actively sponsored development of several open-source ACME clients including Caddy and acme.sh.",
       "website": "https://zerossl.com/",
       "features": [
         "wildcards",
@@ -101,7 +101,7 @@
       ],
       "pros": [
         "Free (zero cost) certificates",
-        "Longer expiry (180 days) can be useful where deployment automation is limited"        
+        "Longer expiry (180 days) can be useful where deployment automation is limited"
       ],
       "cons": [
         "Rate limits apply (hard - not user changeable)",
@@ -117,12 +117,29 @@
       ],
       "pros": [
         "Free (zero cost) certificates",
-        "Longer expiry (180 days) can be useful where deployment automation is limited"        
+        "Longer expiry (180 days) can be useful where deployment automation is limited"
       ],
       "cons": [
         "Requires external account binding (EAB) for account registration",
         "Rate limits are unknown",
         "Certificate feature are very limited in comparison (1 domain and no wildcards)"
+      ]
+    },
+    {
+      "title": "Google Cloud Certificate Manager",
+      "summary": "Public ACME certificate authority via Google Cloud, issuing 90 day certificates including wildcards.",
+      "website": "https://cloud.google.com/public-certificate-authority/docs",
+      "features": [
+        "wildcards",
+        "multi-san",
+        "90-day"
+      ],
+      "pros": [
+        "Supported service with Enterprise SLA"
+      ],
+      "cons": [
+        "Requires external account binding (EAB) for account registration",
+        "Requires beta sign up for access to preview"
       ]
     }
   ]
