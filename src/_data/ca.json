@@ -135,11 +135,12 @@
         "90-day"
       ],
       "pros": [
-        "Supported service with Enterprise SLA"
+        "Supported service with Enterprise SLA",
+        "Allows custom validity period length, so certificates can have less than 90 days if preferred.",
+        "Supports SXG (Signed Exchange) certificates"
       ],
       "cons": [
-        "Requires external account binding (EAB) for account registration",
-        "Requires beta sign up for access to preview"
+        "Requires external account binding (EAB) for account registration"
       ]
     }
   ]
