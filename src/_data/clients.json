@@ -305,6 +305,30 @@
         "https://img.shields.io/github/stars/cert-manager/cert-manager",
         "https://img.shields.io/github/last-commit/cert-manager/cert-manager"
       ]
+    },
+    {
+      "title": "step cli",
+      "summary": "A standalone, general-purpose PKI toolkit",
+      "website": "https://smallstep.com/cli/",
+      "source": "https://github.com/smallstep/cli",
+      "docs": "https://smallstep.com/docs/step-ca/acme-basics",
+      "community": "https://u.step.sm/discord",
+      "categories": [
+        "cli",
+        "integration"
+      ],
+      "tech": [
+        "go"
+      ],
+      "os": [
+        "windows",
+        "linux",
+        "macOS"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/smallstep/cli",
+        "https://img.shields.io/github/last-commit/smallstep/cli"
+      ]
     }
   ]
 }
