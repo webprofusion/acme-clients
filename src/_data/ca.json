@@ -140,7 +140,8 @@
         "Supports SXG (Signed Exchange) certificates"
       ],
       "cons": [
-        "Requires external account binding (EAB) for account registration"
+        "Requires external account binding (EAB) for account registration",
+        "Does not support unicode (punycode) IDN domains"
       ]
     }
   ]
