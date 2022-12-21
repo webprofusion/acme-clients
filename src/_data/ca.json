@@ -55,7 +55,7 @@
       "summary": "The most popular ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
       "website": "https://letsencrypt.org",
       "community": "https://community.letsencrypt.org/",
-      "status": "https://letsencrypt.status.io/",
+      "status": "https://letsencrypt.status.io",
       "features": [
         "wildcards",
         "multi-san",
@@ -75,6 +75,7 @@
       "summary": "The second most popular ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
       "description": "The ZeroSSL service is operated by Stack Holdings in Vienna and is related to apilayer.com. They have actively sponsored development of several open-source ACME clients including Caddy and acme.sh.",
       "website": "https://zerossl.com/",
+      "status": "https://status.zerossl.com",
       "features": [
         "wildcards",
         "multi-san",
