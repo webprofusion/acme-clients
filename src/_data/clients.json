@@ -284,6 +284,28 @@
       ]
     },
     {
+      "title": "Traefik",
+      "summary": "Traefik (pronounced traffic) is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.",
+      "website": "https://traefik.io/",
+      "source": "https://github.com/traefik/traefik",
+      "docs": "https://doc.traefik.io/traefik/",
+      "community": "https://community.traefik.io/",
+      "categories": [
+        "integration"
+      ],
+      "tech": [
+        "go"
+      ],
+      "os": [
+        "docker",
+        "kubernetes"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/traefik/traefik",
+        "https://img.shields.io/github/last-commit/traefik/traefik"
+      ]
+    },
+    {
       "title": "certmanager",
       "summary": "ACME certificate management for Kubernetes and OpenShift",
       "website": "https://cert-manager.io/",
