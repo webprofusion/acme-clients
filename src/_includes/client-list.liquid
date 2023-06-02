@@ -21,13 +21,12 @@
         <span title="Website">🏠</span>
         <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}
         </a>
-        <br>
-        <span title="Documentation">📝</span>
-        <a class="ml-1" href="{{ item.docs }}" target="_blank" title="Documentation">{{item.docs}}</a>
-        <br>
-        <span title="Community">🧑🏿‍💻</span>
-        <a class="ml-1" href="{{ item.community }}" target="_blank" title="Community">{{item.community}}</a>
-
+       <p class="pl-2 mt-2">
+            <span title="Activity">😎</span>
+            {%- for b in item.badges -%}
+              <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1"/>
+            {%- endfor -%}
+          </p>
         <div class="m-2">
           <p>
             <span title="Categories">🎚️</span>
@@ -43,12 +42,7 @@
             {%- endfor -%}
           </p>
 
-          <p class="mt-2">
-            <span title="Activity">😎</span>
-            {%- for b in item.badges -%}
-              <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1"/>
-            {%- endfor -%}
-          </p>
+          
         </div>
       </div>
 
