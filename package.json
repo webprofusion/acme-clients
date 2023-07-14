@@ -37,7 +37,7 @@
     "postcss-cli": "10.1.0",
     "postcss-import": "15.1.0",
     "rimraf": "5.0.0",
-    "tailwindcss": "3.3.2"
+    "tailwindcss": "3.3.3"
   },
   "dependencies": {
     "daisyui": "3.0.0"
