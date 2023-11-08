@@ -127,9 +127,9 @@
       ]
     },
     {
-      "title": "Google Cloud Certificate Manager",
+      "title": "Google Trust Services",
       "summary": "Public ACME certificate authority via Google Cloud, issuing 90 day certificates including wildcards.",
-      "website": "https://cloud.google.com/public-certificate-authority/docs",
+      "website": "https://pki.goog/",
       "features": [
         "wildcards",
         "multi-san",
