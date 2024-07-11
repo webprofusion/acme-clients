@@ -66,8 +66,7 @@
         "Active support community"
       ],
       "cons": [
-        "Rate limits apply (users can apply for higher rate limits)",
-        "Using an ECDSA-only chain requires opt-in via allow-list"
+        "Rate limits apply (users can apply for higher rate limits)"
       ]
     },
     {
