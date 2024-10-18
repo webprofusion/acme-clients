@@ -148,7 +148,6 @@
         "python"
       ],
       "os": [
-        "windows",
         "linux",
         "macOS"
       ],
