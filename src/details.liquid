@@ -22,8 +22,7 @@ layout: default
     </ul>
   </div>
 
-<div class="container p-4">
-  <h2 class="mt-6 text-slate-800">{{item.title}}</h2>
+  <h2 class="text-xl mt-6 text-slate-800">{{item.title}}</h2>
 
   {% if item.summary %}
   <p class="pt-2 text-slate-800">
@@ -31,28 +30,6 @@ layout: default
   </p>
   {% endif %}
 
-  <div class="p-40mt-2 max-w-xxl">
-    <p class="mt-4 text-slate-400"> Categories:
-
-      {%- for c in item.categories -%}
-      <span class="p-1 rounded bg-slate-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
-      {%- endfor -%}
-    </p>
-
-    <p class="mt-2 text-slate-400">
-      Operating Systems:
-      {%- for c in item.os -%}
-      <span class="text-slate-400 p-1 rounded bg-gray-200 ml-1 mr-1 lowercase">{{ c }}</span>
-      {%- endfor -%}
-    </p>
-
-    <p class="mt-2 text-slate-400">
-      Technology:
-      {%- for c in item.tech -%}
-      <span class="text-slate-400 p-1 rounded bg-gray-50 ml-1 mr-1 lowercase">{{ c }}</span>
-      {%- endfor -%}
-    </p>
-  </div>
 
 
   <div class="pt-4 pb-4 mt-2 max-w-xxl">
@@ -92,6 +69,29 @@ layout: default
       </ul>
     {% endif %}
 
+  </div>
+
+  <div class="p-40mt-2 max-w-xxl">
+    <p class="mt-4 text-slate-400"> Categories:
+
+      {%- for c in item.categories -%}
+      <span class="p-1 rounded bg-slate-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
+      {%- endfor -%}
+    </p>
+
+    <p class="mt-2 text-slate-400">
+      Operating Systems:
+      {%- for c in item.os -%}
+      <span class="text-slate-400 p-1 rounded bg-gray-200 ml-1 mr-1 lowercase">{{ c }}</span>
+      {%- endfor -%}
+    </p>
+
+    <p class="mt-2 text-slate-400">
+      Technology:
+      {%- for c in item.tech -%}
+      <span class="text-slate-400 p-1 rounded bg-gray-50 ml-1 mr-1 lowercase">{{ c }}</span>
+      {%- endfor -%}
+    </p>
   </div>
 
   <h3 class="mt-2">Activity</h3>

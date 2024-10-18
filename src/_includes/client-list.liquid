@@ -31,14 +31,14 @@
           <p>
             <span title="Categories">🎚️</span>
             {%- for c in item.categories -%}
-              <span class="text-slate-400 p-1 rounded bg-slate-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
+              <span class="text-xs text-indigo-400 p-1 rounded bg-indigo-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
             {%- endfor -%}
           </p>
 
           <p class="mt-2">
             <span title="Operating Systems">🎮</span>
             {%- for c in item.os -%}
-              <span class="text-sky-400 p-1 rounded bg-gray-200 ml-1 mr-1 lowercase">{{ c }}</span>
+              <span class="text-xs text-indigo-400 p-1 rounded bg-indigo-100 ml-1 mr-1 lowercase lowercase">{{ c }}</span>
             {%- endfor -%}
           </p>
 
