@@ -3,12 +3,14 @@ layout: default
 ---
 
 <main class="container mx-auto flex flex-col flex-wrap px-2 pt-12 font-sans">
-  <header class="flex w-full flex-col justify-center overflow-y-hidden lg:items-start pb-4 break-after-auto bg-slate-50 p-4 rounded-md">
-    <h1 class="my-4 text-center text-3xl leading-tight text-slate-500 md:text-left md:text-5xl">
+  <header >
+    <h1 class="my-4 text-center text-3xl leading-tight md:text-left ">
       ACME Clients
     </h1>
     <p class="mb-6 text-base leading-normal">A dedicated resource to help you find the right ACME client option to meet your requirements from a broad selection of popular tools.</p>
 
+    <div class="flex w-full flex-col justify-center overflow-y-hidden lg:items-start pb-4 break-after-auto bg-slate-50 p-4 rounded-md">
+    
     <h2 class="mb-2 text-slate-600">What is an ACME client?</h2>
     <p>An ACME client is any software which can talk to an ACME (Automatic Certificate Management Environment) enabled <a href="/certificate-authorities">Certificate Authority</a> (such as Let’s Encrypt, BuyPass Go, ZeroSSL etc). Some are tools designed to be used by end-users to order and manage certificates, some are integrations into other services (such as a built-in feature in a web hosting product).</p>
     <p class="mt-2">To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a>
@@ -20,6 +22,7 @@ layout: default
     </p>
     <p class="mt-2 text-sm text-slate-600">Note: This site is hosted and maintained by the developers of <a target="_blank" href="https://certifytheweb.com">Certify The Web</a>
     </p>
+  </div>
 
   </header>
 
