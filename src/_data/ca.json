@@ -84,7 +84,7 @@
         "Free (zero cost) certificates"
       ],
       "cons": [
-        "Rate limits apply (hard - not user changeable)",
+        "Rate limits apply, max 100 free certs per account",
         "No active support community",
         "Requires external account binding (EAB) for account registration"
       ]
