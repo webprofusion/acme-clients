@@ -350,6 +350,36 @@
         "https://img.shields.io/github/stars/smallstep/cli",
         "https://img.shields.io/github/last-commit/smallstep/cli"
       ]
+    },
+    {
+      "title": "simple-acme",
+      "website": "https://www.simple-acme.com/",
+      "summary": "A cross platform command line client.",
+      "docs": "https://simple-acme.com/manual/getting-started",
+      "source": "https://github.com/simple-acme/simple-acme",
+      "community": "https://github.com/simple-acme/simple-acme/issues",
+      "categories": [
+        "cli"
+      ],
+      "tech": [
+        ".net",
+        "c#"
+      ],
+      "os": [
+        "windows",
+        "linux"
+      ],
+      "pros": [
+        "Easy to develop plugins",
+        "Support for 20+ DNS APIs"
+      ],
+      "cons": [
+        "Linux support still in beta"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/simple-acme/simple-acme",
+        "https://img.shields.io/github/last-commit/simple-acme/simple-acme"
+      ]
     }
   ]
 }
