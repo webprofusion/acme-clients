@@ -1,6 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "tailwindcss";
+
+
+@theme {  --font-sans: "Roboto", sans-serif; }
+
+.breadcrumbs >ul >li {
+
+display:inline;
+
+}
+
+.breadcrumbs li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
 
 a {
   color: #6a6a6a;

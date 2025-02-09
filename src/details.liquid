@@ -13,6 +13,7 @@ layout: default
     </h1>
   </header>
 
+
   <div class="text-sm breadcrumbs">
     <ul>
       <li><a href="/">Home</a></li>
@@ -93,6 +94,7 @@ layout: default
     </p>
   </div>
 
+      {% if item.badges %}
   <h3 class="mt-2">Activity</h3>
   <p class="mt-2">
 
@@ -100,6 +102,7 @@ layout: default
     <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1" />
     {%- endfor -%}
   </p>
+     {% endif %}
 
   <p class="mt-2">
     To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a>

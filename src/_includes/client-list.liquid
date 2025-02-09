@@ -21,12 +21,16 @@
         <span title="Website">🏠</span>
         <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}
         </a>
-       <p class="pl-2 mt-2">
+
+        {% if item.badges %}
+          <p class="pl-2 mt-2">
             <span title="Activity">😎</span>
             {%- for b in item.badges -%}
               <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1"/>
             {%- endfor -%}
           </p>
+        {% endif %}
+
         <div class="m-2">
           <p>
             <span title="Categories">🎚️</span>

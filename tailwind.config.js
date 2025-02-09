@@ -9,7 +9,7 @@ module.exports = {
       xl: '1440px',
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
+      sans: ['Roboto', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
     extend: {
@@ -23,9 +23,7 @@ module.exports = {
     }
   },
   plugins: [
-    require("daisyui")
+
   ],
-  daisyui:{
-    themes:[]
-  }
+
 };

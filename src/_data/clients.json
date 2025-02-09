@@ -380,6 +380,62 @@
         "https://img.shields.io/github/stars/simple-acme/simple-acme",
         "https://img.shields.io/github/last-commit/simple-acme/simple-acme"
       ]
+    },
+    {
+      "title": "CertSage",
+      "summary": "A PHP based ACME Client designed for non-root access.",
+      "description": "CertSage is a PHP script which can be installed on existing PHP sites. It is ideal if you are using a shared hosting plan that does not allow root access, such as shared hosting.",
+      "website": "https://certsage.com",
+      "source": "https://certsage.com",
+      "docs": "https://certsage.com",
+      "community": "https://community.letsencrypt.org/",
+      "categories": [
+        "ui",
+        "web"
+      ],
+      "tech": [
+        "php"
+      ],
+      "os": [
+        "web"
+      ],
+      "pros": [
+        "Optimized for sites without root access, including shared hosting",
+        "Simple installation and management via a web interface"
+      ],
+      "cons": [
+        "PHP 7+ enabled sites only"
+      ]
+    },
+    {
+      "title": "Certimate",
+      "website": "https://docs.certimate.me",
+      "summary": "A self-hosted web based certificate manager.",
+      "docs": "https://docs.certimate.me/",
+      "source": "https://github.com/usual2970/certimate",
+      "community": "https://github.com/usual2970/certimate/issues",
+      "categories": [
+        "ui","web"
+      ],
+      "tech": [
+        "go",
+        "lego"
+      ],
+      "os": [
+        "linux",
+        "docker"
+      ],
+      "pros": [
+        "Centralized management of certificates",
+        "Multiple DNS providers and deployment providers"
+      ],
+      "cons": [
+        "Docs only available in Chinese"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/usual2970/certimate",
+        "https://img.shields.io/github/last-commit/usual2970/certimate"
+      ]
     }
   ]
 }
