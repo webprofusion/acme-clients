@@ -410,7 +410,7 @@
     {
       "title": "Certimate",
       "website": "https://docs.certimate.me",
-      "summary": "A self-hosted web based certificate manager.",
+      "summary": "A self-hosted web based certificate manager based on lego.",
       "docs": "https://docs.certimate.me/",
       "source": "https://github.com/usual2970/certimate",
       "community": "https://github.com/usual2970/certimate/issues",
