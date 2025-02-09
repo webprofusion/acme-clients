@@ -37,16 +37,36 @@
   ],
   "features": [
     {
+      "key": "http-01",
+      "description": "HTTP domain validation."
+    },
+    {
+      "key": "dns-01",
+      "description": "DNS domain validation."
+    },
+    {
       "key": "multi-auth",
-      "description": "Supports combining multiple domain validation configurations when working with a single certificate."
+      "description": "Option to combine multiple domain validation configurations when working with a single certificate."
     },
     {
       "key": "multi-ca",
-      "description": "Supports using a different certificate authority per certificate."
+      "description": "Option to use a different certificate authority per certificate."
     },
     {
       "key": "custom-csr",
-      "description": "Supports using a custom Certificate Signing Request (CSR) generated from an external source."
+      "description": "Option to use a custom Certificate Signing Request (CSR) generated from an external source."
+    },
+    {
+      "key": "ca-fallback",
+      "description": "Supports automatic fallback to a different CA if renewals fail with default/selected CA."
+    },
+    {
+      "key": "acme-ari",
+      "description": "Supports ACME ARI (draft) extensions for renewal info checking."
+    },
+    {
+      "key": "acme-profiles",
+      "description": "Supports ACME Profiles (draft) extension for certificate feature selection."
     }
   ],
   "list": [
@@ -75,19 +95,25 @@
         "windows"
       ],
       "features": [
+        "http-01",
+        "dns-01",
         "multi-auth",
         "multi-ca",
-        "custom-csr"
+        "custom-csr",
+        "ca-fallback",
+        "acme-ari",
+        "acme-profiles"
       ],
       "pros": [
-        "Optimised for Windows users, with built-in support for IIS and the windows certificate store",
-        "Registered users have access to dedicated helpdesk ticketing",
+        "Popular choice on Windows, with hundreds of thousands of users.",
+        "Optimised for Windows users, with built-in support for IIS and the windows certificate store.",
+        "Registered users have access to dedicated helpdesk ticketing.",
         "Support for a wide range of DNS APIs (28+, including many provided via Posh-ACME).",
-        "Support multiple auth config (e.g. mixing http and DNS validation, or using multiple DNS providers in one cert)",
-        "Extensive range of optional Deployment Tasks to perform scripting or to deploy to Apache, nginx, Azure Key Vault etc"
+        "Support multiple auth config (e.g. mixing http and DNS validation, or using multiple DNS providers in one cert).",
+        "Extensive range of optional Deployment Tasks to perform scripting or to deploy to Apache, nginx, Azure Key Vault etc."
       ],
       "cons": [
-        "Currently only available on Windows",
+        "Currently only available on Windows.",
         "Commercial users require a license after their evaluation."
       ],
       "badges": [
@@ -256,6 +282,13 @@
       "badges": [
         "https://img.shields.io/github/stars/win-acme/win-acme",
         "https://img.shields.io/github/last-commit/win-acme/win-acme"
+      ],
+      "pros": [
+        "Optimized for Windows, with built-in deployment options for IIS",
+        "Plugins for multiple DNS providers"
+      ],
+      "cons": [
+        "No longer maintained by the main developer. Development has moved to the simple-acme fork."
       ]
     },
     {

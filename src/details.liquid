@@ -32,24 +32,32 @@ layout: default
 
 
 
-  <div class="pt-4 pb-4 mt-2 max-w-xxl">
-    <p>
+  <div class="pt-2 pb-4 mt-2 max-w-xxl">
+    <p class="ms-4">
       <span title="Website">🏠</span>
       <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}
       </a>
     </p>
 
     <h3 class="mt-4">Documentation</h3>
-    <p>
+    <p class="ms-4">
       <span title="Documentation">📝</span>
       <a class="ml-1" href="{{ item.docs }}" target="_blank" title="Documentation">{{item.docs}}</a>
     </p>
 
     <h3 class="mt-4">Community</h3>
-    <p>
+    <p class="ms-4">
       <span title="Community">🧑🏿‍💻</span>
       <a class="ml-1" href="{{ item.community }}" target="_blank" title="Community">{{item.community}}</a>
     </p>
+
+    {% if item.source %}
+        <h3 class="mt-4">Source Code</h3>
+    <p class="ms-4">
+      <span title="Source">🧑🏿‍💻</span>
+      <a class="ml-1" href="{{ item.source }}" target="_blank" title="Source">{{item.source}}</a>
+    </p>
+    {% endif %}
 
     {% if item.pros %}
       <h3 class="mt-4">Pros</h3>
@@ -69,6 +77,20 @@ layout: default
       </ul>
     {% endif %}
 
+
+ {% if item.features %}
+      <h3 class="mt-2">Features</h3>
+      <ul class="list-disc ml-8">
+        {% for c in item.features -%}
+          {% for f in clients.features -%}
+          
+           {% if f.key==c -%}
+            <li>{{f.description}}</li>
+            {% endif -%}
+          {% endfor -%}
+        {% endfor -%}
+      </ul>
+    {% endif %}
   </div>
 
   <div class="p-40mt-2 max-w-xxl">
@@ -104,7 +126,7 @@ layout: default
   </p>
      {% endif %}
 
-  <p class="mt-2">
+  <p class="mt-6">
     To submit edits to the information listed here, see our <a class="font-bold hover:text-slate-400" href="https://github.com/webprofusion/acme-clients" target="_blank">github project</a>
   </p>
 

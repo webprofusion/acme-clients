@@ -4,6 +4,8 @@ const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
 
+  eleventyConfig.addGlobalData("clients", "clients");
+
   eleventyConfig.addPlugin(UpgradeHelper);
   
   // custom filter for data lists : https://www.11ty.dev/docs/languages/liquid/#multiple-filter-arguments
