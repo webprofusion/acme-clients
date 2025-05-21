@@ -52,7 +52,7 @@
   "list": [
     {
       "title": "Let's Encrypt",
-      "summary": "The most popular ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
+      "summary": "The original ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
       "website": "https://letsencrypt.org",
       "community": "https://community.letsencrypt.org/",
       "status": "https://letsencrypt.status.io",
@@ -71,7 +71,7 @@
     },
     {
       "title": "ZeroSSL",
-      "summary": "The second most popular ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
+      "summary": "ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
       "description": "The ZeroSSL service is operated by Stack Holdings in Vienna and is related to apilayer.com. They have actively sponsored development of several open-source ACME clients including Caddy and acme.sh.",
       "website": "https://zerossl.com/",
       "status": "https://status.zerossl.com",
@@ -125,7 +125,7 @@
     },
     {
       "title": "Google Trust Services",
-      "summary": "Public ACME certificate authority via Google Cloud, issuing 90 day certificates including wildcards.",
+      "summary": "ACME certificate authority, issuing 90 day certificates including wildcards and up to 100 subjects per certificate.",
       "website": "https://pki.goog/",
       "features": [
         "wildcards",
@@ -134,12 +134,11 @@
       ],
       "pros": [
         "Supported service with Enterprise SLA",
-        "Allows custom validity period length, so certificates can have less than 90 days if preferred.",
+        "Allows custom validity period length, so certificate lifetimes may be less than 90 days if preferred.",
         "Supports SXG (Signed Exchange) certificates"
       ],
       "cons": [
-        "Requires external account binding (EAB) for account registration",
-        "Does not support unicode (punycode) IDN domains"
+        "Requires external account binding (EAB) for account registration"
       ]
     }
   ]
