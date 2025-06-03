@@ -33,6 +33,10 @@
     {
       "key": "integration",
       "description": "Products which integrate ACME as a built-in feature."
+    },
+     {
+      "key": "unmaintained",
+      "description": "Clients that appear no longer to be maintained or have been superseded by other clients."
     }
   ],
   "features": [
@@ -191,7 +195,7 @@
         "https://img.shields.io/github/last-commit/certbot/certbot"
       ]
     },
-    {
+       {
       "title": "getssl",
       "summary": "A client implemented as a Unix (bash) shell script.",
       "website": "https://github.com/srvrco/getssl",
@@ -199,7 +203,8 @@
       "docs": "https://github.com/srvrco/getssl/wiki",
       "community": "https://github.com/srvrco/getssl/issues",
       "categories": [
-        "cli"
+        "cli",
+        "unmaintained"
       ],
       "tech": [
         "bash"
@@ -270,7 +275,8 @@
       "source": "https://github.com/win-acme/win-acme",
       "community": "https://github.com/win-acme/win-acme/issues",
       "categories": [
-        "cli"
+        "cli",
+        "unmaintained"
       ],
       "tech": [
         ".net",
