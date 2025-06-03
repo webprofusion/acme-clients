@@ -1,54 +1,85 @@
-<h2 class="pt-4 pb-4 drop-shadow-xl" id="{{sectionid}}">
-  <a class="text-slate-800" href="#{{sectionid}}">{{ title }}</a>
-</h2>
+<div class="mb-8">
+  <div class="flex items-center mb-6">
+    <div class="flex-grow h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+    <h2 class="px-4 text-2xl font-bold text-slate-800 bg-white" id="{{sectionid}}">
+      <a class="hover:text-purple-600 transition-colors" href="#{{sectionid}}">{{ title }}</a>
+    </h2>
+    <div class="flex-grow h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+  </div>
 
-<div class="container  mr-4 ">
-{{ list | categoryFilter }}
-{% assign filteredList = list | categoryFilter:category %}
+  <div class="space-y-4">
+    {% assign filteredList = list | categoryFilter:category %}
+    {%- for item in filteredList -%}
+      <div class="modern-card bg-white rounded-xl shadow-lg hover:shadow-xl border border-slate-200 p-6 group">
+        <!-- Header with title and website -->
+        <div class="flex items-start justify-between mb-4">
+          <h3 class="text-xl font-semibold text-slate-800 group-hover:text-purple-600 transition-colors">
+            <a href="/clients/{{ item.title | slug }}" title="Read more about {{item.title}}" class="flex items-center">
+              {{ item.title }}
+              <svg class="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+          </h3>
+          
+          <a href="{{ item.website }}" target="_blank" title="Visit {{ item.title }} website" class="flex items-center text-sm text-slate-500 hover:text-purple-600 transition-colors bg-slate-50 hover:bg-purple-50 px-3 py-1 rounded-full">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+            Website
+          </a>
+        </div>
 
-  {%- for item in filteredList -%}
-
-    <div class="shadow-lg p-2 mt-2 max-w-md bg-gray-50">
-      <h3 class="p-2 text-slate-800"><a href="/clients/{{ item.title | slug }}" title="Read more about {{item.title}}">{{ item.title }}</a></h3>
-
-      {% if item.summary %}
-        <p class="p-2 text-slate-600">
-          {{ item.summary }}
-        </p>
-      {% endif %}
-
-      <p class="pl-2 text-sm">
-        <span title="Website">🏠</span>
-        <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}
-        </a>
-
-        {% if item.badges %}
-          <p class="pl-2 mt-2">
-            <span title="Activity">😎</span>
-            {%- for b in item.badges -%}
-              <img src="{{b}}" alt="activity badge" class="inline-block ml-1 mr-1"/>
-            {%- endfor -%}
+        <!-- Summary -->
+        {% if item.summary %}
+          <p class="text-slate-600 mb-4 leading-relaxed">
+            {{ item.summary }}
           </p>
         {% endif %}
 
-        <div class="m-2">
-          <p>
-            <span title="Categories">🎚️</span>
+        <!-- Activity badges -->
+        {% if item.badges %}
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-sm font-medium text-slate-700">Activity:</span>
+            {%- for b in item.badges -%}
+              <img src="{{b}}" alt="activity badge" class="h-5 rounded"/>
+            {%- endfor -%}
+          </div>
+        {% endif %}
+
+        <!-- Categories and OS tags -->
+        <div class="space-y-3">
+          <!-- Categories -->
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-sm font-medium text-slate-700 flex items-center">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+              </svg>
+              Categories:
+            </span>
             {%- for c in item.categories -%}
-              <span class="text-xs text-indigo-400 p-1 rounded bg-indigo-100 ml-1 mr-1 lowercase"><a href="/categories/{{ c | slug }}">{{ c }}</a></span>
+              <a href="/categories/{{ c | slug }}" class="inline-flex items-center px-2.5 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full hover:bg-purple-200 transition-colors capitalize">
+                {{ c }}
+              </a>
             {%- endfor -%}
-          </p>
+          </div>
 
-          <p class="mt-2">
-            <span title="Operating Systems">🎮</span>
+          <!-- Operating Systems -->
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-sm font-medium text-slate-700 flex items-center">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              Platforms:
+            </span>
             {%- for c in item.os -%}
-              <span class="text-xs text-indigo-400 p-1 rounded bg-indigo-100 ml-1 mr-1 lowercase lowercase">{{ c }}</span>
+              <span class="inline-flex items-center px-2.5 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full capitalize">
+                {{ c }}
+              </span>
             {%- endfor -%}
-          </p>
-
-          
+          </div>
         </div>
       </div>
-
     {%- endfor -%}
   </div>
+</div>

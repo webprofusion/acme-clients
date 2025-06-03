@@ -1,62 +1,116 @@
-<h2 class="pt-4 pb-4 drop-shadow-xl" id="{{sectionid}}">
-  <a class="text-slate-800" href="#{{sectionid}}">{{ title }}</a>
-</h2>
-
-<div class="container  mr-4 ">
-
-  {%- for item in list -%}
-
-  <div class="shadow-lg p-2 mt-2  bg-gray-50">
-    <h3 class="p-2 text-slate-800">{{ item.title }}</h3>
-
-    {% if item.summary %}
-    <p class="p-2 text-slate-600">
-      {{ item.summary }} {{item.description}}
-    </p>
-    {% endif %}
-
-    <div class="pl-2 text-sm">
-      <span title="Website">🏠</span>
-      <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}</a>
-
-      {% if item.status %}
-      <br>
-      <span title="Status">🚑</span>
-      <a class="ml-1" href="{{ item.status }}" target="_blank" title="Status">{{item.status}}</a>
-      {% endif %}
-
-      {% if item.community %}
-      <br>
-      <span title="Community">🧑🏿‍💻</span>
-      <a class="ml-1" href="{{ item.community }}" target="_blank" title="Community">{{item.community}}</a>
-      {% endif %}
-
-      <div class="mt-4  ">
-        <div class="w-3/6">
-          {% if item.pros %}
-          <h3>Pros</h3>
-          <ul class="list-disc ml-8">
-            {%- for c in item.pros -%}
-            <li>{{ c }}</li>
-            {%- endfor -%}
-          </ul>
-          {% endif %}
-        </div>
-
-        <div  class="w-3/6"> 
-          {% if item.cons %}
-          <h3>Cons</h3>
-          <ul class="list-disc ml-8">
-            {%- for c in item.cons -%}
-            <li>{{ c }}</li>
-            {%- endfor -%}
-          </ul>
-          {% endif %}
-
-        </div>
-
-      </div>
-    </div>
+<div class="mb-8">
+  <div class="flex items-center mb-6">
+    <div class="flex-grow h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+    <h2 class="px-4 text-2xl font-bold text-slate-800 bg-white" id="{{sectionid}}">
+      <a class="hover:text-emerald-600 transition-colors" href="#{{sectionid}}">{{ title }}</a>
+    </h2>
+    <div class="flex-grow h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
   </div>
-  {%- endfor -%}
+
+  <div class="grid gap-6">
+    {%- for item in list -%}
+      <div class="modern-card bg-white rounded-xl shadow-lg hover:shadow-xl border border-slate-200 p-6 group">
+        <!-- Header with title and website -->
+        <div class="flex items-start justify-between mb-4">
+          <h3 class="text-xl font-semibold text-slate-800 group-hover:text-emerald-600 transition-colors">
+            {{ item.title }}
+          </h3>
+          
+          <a href="{{ item.website }}" target="_blank" title="Visit {{ item.title }} website" class="flex items-center text-sm text-slate-500 hover:text-emerald-600 transition-colors bg-slate-50 hover:bg-emerald-50 px-3 py-1 rounded-full">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+            Website
+          </a>
+        </div>
+
+        <!-- Summary -->
+        {% if item.summary %}
+          <p class="text-slate-600 mb-6 leading-relaxed">
+            {{ item.summary }} {{ item.description }}
+          </p>
+        {% endif %}
+
+        <!-- Links Section -->
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <!-- Status Link -->
+          {% if item.status %}
+            <a href="{{ item.status }}" target="_blank" class="flex items-center p-3 bg-blue-50 hover:bg-blue-100 rounded-lg border border-blue-200 transition-colors group">
+              <div class="bg-blue-500 p-2 rounded-lg mr-3">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v6a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="font-medium text-blue-700">Service Status</span>
+                <p class="text-sm text-blue-600">{{ item.status }}</p>
+              </div>
+            </a>
+          {% endif %}
+
+          <!-- Community Link -->
+          {% if item.community %}
+            <a href="{{ item.community }}" target="_blank" class="flex items-center p-3 bg-purple-50 hover:bg-purple-100 rounded-lg border border-purple-200 transition-colors group">
+              <div class="bg-purple-500 p-2 rounded-lg mr-3">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="font-medium text-purple-700">Community</span>
+                <p class="text-sm text-purple-600">{{ item.community }}</p>
+              </div>
+            </a>
+          {% endif %}
+        </div>
+
+        <!-- Pros and Cons -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Pros -->
+          {% if item.pros %}
+            <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-200">
+              <h4 class="font-semibold text-emerald-800 mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Advantages
+              </h4>
+              <ul class="space-y-2">
+                {%- for c in item.pros -%}
+                  <li class="flex items-start text-sm text-emerald-700">
+                    <svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    {{ c }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {% endif %}
+
+          <!-- Cons -->
+          {% if item.cons %}
+            <div class="bg-amber-50 p-4 rounded-lg border border-amber-200">
+              <h4 class="font-semibold text-amber-800 mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                </svg>
+                Considerations
+              </h4>
+              <ul class="space-y-2">
+                {%- for c in item.cons -%}
+                  <li class="flex items-start text-sm text-amber-700">
+                    <svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                    </svg>
+                    {{ c }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
 </div>

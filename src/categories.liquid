@@ -13,15 +13,24 @@ layout: default
     </h1>
 
   </header>
-
-  <div class="text-sm breadcrumbs">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/">ACME Clients</a></li>
-      <li><a href="/">Categories</a></li>
-      <li>{{ item.key }}</li>
-    </ul>
-  </div>
+  <!-- Breadcrumbs -->
+  <nav class="mb-8">
+    <div class="flex items-center space-x-2 text-sm bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-md border border-slate-200">
+      <a href="/" class="text-slate-700 hover:text-purple-600 transition-colors font-medium">Home</a>
+      <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+      <a href="/" class="text-slate-700 hover:text-purple-600 transition-colors font-medium">ACME Clients</a>
+      <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+      <a href="/categories/" class="text-slate-700 hover:text-purple-600 transition-colors font-medium">Categories</a>
+      <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+      <span class="text-slate-800 font-semibold">{{ item.key }}</span>
+    </div>
+  </nav>
 
   {% include 'client-list', title:item.description, sectionid:item.key, list:clients.list , category: item.key %}
   

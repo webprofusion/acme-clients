@@ -6,29 +6,43 @@ pagination:
 permalink: "clients/{{ item.title | slug }}/"
 layout: default
 ---
-<main class="container mx-auto flex flex-col flex-wrap px-4 pt-12 mx-4">
-  <header>
-    <h1 class="my-4 text-center text-3xl leading-tight md:text-left">
-      ACME Clients - {{item.title}}
-    </h1>
-  </header>
 
-
-  <div class="text-sm breadcrumbs">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/">ACME Clients</a></li>
-      <li>{{ item.title }}</li>
-    </ul>
+<!-- Header Section -->
+<div class="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white">
+  <div class="container mx-auto px-6 py-16">
+    <div class="max-w-4xl mx-auto">      <!-- Breadcrumbs -->
+      <nav class="mb-8">
+        <div class="flex items-center space-x-2 text-sm bg-white/25 backdrop-blur-md rounded-full px-4 py-2 border border-white/30 shadow-lg">
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition-colors font-medium">Home</a>
+          <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          <a href="/" class="text-gray-800 hover:text-blue-600 transition-colors font-medium">ACME Clients</a>
+          <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+          <span class="text-gray-900 font-semibold">{{ item.title }}</span>
+        </div>
+      </nav>
+      
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          <span class="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            {{ item.title }}
+          </span>
+        </h1>
+        
+        {% if item.summary %}
+          <p class="text-lg md:text-xl text-blue-100 leading-relaxed max-w-3xl">
+            {{ item.summary }} {{ item.description }}
+          </p>
+        {% endif %}
+      </div>
+    </div>
   </div>
+</div>
 
-  <h2 class="text-xl mt-6 text-slate-800">{{item.title}}</h2>
-
-  {% if item.summary %}
-  <p class="pt-2 text-slate-800">
-    {{ item.summary }} {{ item.description }}
-  </p>
-  {% endif %}
+<main class="container mx-auto px-6 py-12 max-w-4xl">
 
 
 
