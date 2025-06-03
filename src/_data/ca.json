@@ -47,6 +47,14 @@
     {
       "key": "90-day",
       "description": "Supports using a custom Certificate Signing Request (CSR) generated from an external source."
+    },
+    {
+      "key": "ari",
+      "description": "Supports ACME ARI (draft) for renewal information, useful to renew certs earlier in the event of revoke etc."
+    },
+    {
+      "key": "profiles",
+      "description": "Supports ACME Profiles (draft) used for grouping different specifications of certificate."
     }
   ],
   "list": [
@@ -59,7 +67,9 @@
       "features": [
         "wildcards",
         "multi-san",
-        "90-day"
+        "90-day",
+        "ari",
+        "profiles"
       ],
       "pros": [
         "Free (zero cost) certificates",
@@ -72,13 +82,14 @@
     {
       "title": "ZeroSSL",
       "summary": "ACME certificate authority, issuing free 90 day certificates including wildcards, with up to 100 subject names per cert.",
-      "description": "The ZeroSSL service is operated by Stack Holdings in Vienna and is related to apilayer.com. They have actively sponsored development of several open-source ACME clients including Caddy and acme.sh.",
+      "description": "The ZeroSSL service is operated by HID Global (Assa Abloy). ",
       "website": "https://zerossl.com/",
       "status": "https://status.zerossl.com",
       "features": [
         "wildcards",
         "multi-san",
-        "90-day"
+        "90-day",
+        "ari"
       ],
       "pros": [
         "Free (zero cost) certificates"
@@ -95,7 +106,8 @@
       "website": "https://www.buypass.com/",
       "features": [
         "multi-san",
-        "180-day"
+        "180-day",
+        "ari"
       ],
       "pros": [
         "Free (zero cost) certificates",
@@ -130,7 +142,8 @@
       "features": [
         "wildcards",
         "multi-san",
-        "90-day"
+        "90-day",
+        "ari"
       ],
       "pros": [
         "Supported service with Enterprise SLA",
