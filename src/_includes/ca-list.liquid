@@ -8,7 +8,8 @@
   </div>
 
   <div class="grid gap-6">
-    {%- for item in list -%}
+    {% assign sortedList = list | sort: "title" %}
+    {%- for item in sortedList -%}
       <div class="modern-card bg-white rounded-xl shadow-lg hover:shadow-xl border border-slate-200 p-6 group">
         <!-- Header with title and website -->
         <div class="flex items-start justify-between mb-4">
@@ -110,6 +111,20 @@
             </div>
           {% endif %}
         </div>
+
+          <!-- Endpoints -->
+          {% if item.directories %}
+           <ul class="space-y-2 pt-6">
+                {%- for c in item.directories -%}
+                  <li class="flex items-start text-sm text-emerald-900">
+                    
+                    <a target="_blank" href="{{ c }}">{{ c }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+          {% endif %}
+  
+
       </div>
     {%- endfor -%}
   </div>
