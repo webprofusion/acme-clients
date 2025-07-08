@@ -34,7 +34,7 @@ layout: default
         
         {% if item.summary %}
           <p class="text-lg md:text-xl text-blue-100 leading-relaxed max-w-3xl">
-            {{ item.summary }} {{ item.description }}
+            {{ item.summary }} 
           </p>
         {% endif %}
       </div>
@@ -42,11 +42,12 @@ layout: default
   </div>
 </div>
 
-<main class="container mx-auto px-6 py-12 max-w-4xl">
-
-
+<main class="container mx-auto py-12 max-w-4xl">
 
   <div class="pt-2 pb-4 mt-2 max-w-xxl">
+<p class="text-gray-700 leading-relaxed mb-6 text-sm">
+{{ item.description }}</p>
+
     <p class="ms-4">
       <span title="Website">🏠</span>
       <a class="ml-1" href="{{ item.website }}" target="_blank" title="Website">{{ item.website }}

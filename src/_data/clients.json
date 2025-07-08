@@ -8,7 +8,11 @@
     },
     {
       "key": "desktop",
-      "description": "Tools with a desktop UI"
+      "description": "Tools with a Desktop UI"
+    },
+        {
+      "key": "web",
+      "description": "Tools with a Web based UI"
     },
     {
       "key": "cli-optional",
@@ -34,7 +38,7 @@
       "key": "integration",
       "description": "Products which integrate ACME as a built-in feature."
     },
-     {
+    {
       "key": "unmaintained",
       "description": "Clients that appear no longer to be maintained or have been superseded by other clients."
     }
@@ -71,12 +75,17 @@
     {
       "key": "acme-profiles",
       "description": "Supports ACME Profiles (draft) extension for certificate feature selection."
+    },
+    {
+      "key": "ipaddress",
+      "description": "Supports requesting certificates for IP address identifiers."
     }
   ],
   "list": [
     {
       "title": "Certify The Web",
-      "summary": "Professional Automated Certificate Management UI for Windows servers, including direct support for IIS and a wide range of deployment tasks.",
+      "summary": "Professional Automated Certificate Management tools, including direct support for Windows/IIS and a wide range of deployment tasks.",
+      "description": "Certify The Web is a suite of tools for ACME certificate management. Products include the popular <em>Certify Certificate Manager</em> (Desktop UI + Service for Windows Server), <em>Certify Management Hub</em> (centralised cross-platform cert management and renewal monitoring web UI) and <em>Certify Management Agent</em> (cross platform agent for cert management and monitoring).",
       "website": "https://certifytheweb.com",
       "source": "https://github.com/webprofusion/certify",
       "docs": "https://docs.certifytheweb.com/",
@@ -84,6 +93,7 @@
       "categories": [
         "ui",
         "desktop",
+        "web",
         "api",
         "cli-optional",
         "supported",
@@ -91,12 +101,12 @@
       ],
       "tech": [
         ".net",
-        "c#",
-        "wpf",
         "powershell"
       ],
       "os": [
-        "windows"
+        "windows",
+        "linux",
+        "macos"
       ],
       "features": [
         "http-01",
@@ -106,18 +116,19 @@
         "custom-csr",
         "ca-fallback",
         "acme-ari",
-        "acme-profiles"
+        "acme-profiles",
+        "ipaddress"
       ],
       "pros": [
-        "Popular choice on Windows, with hundreds of thousands of users.",
-        "Optimised for Windows users, with built-in support for IIS and the windows certificate store.",
+        "A popular choice on Windows, with hundreds of thousands of users. Certify Certificate Manager is optimised for Windows users, with built-in support for IIS and the windows certificate store.",
+        "Certify Management Hub is a new cross platform self-hosted web tool for centralised cert management with role based security and an API. Includes multi-server management and monitoring of renewals managed by selected 3rd party cert managers.",
         "Registered users have access to dedicated helpdesk ticketing.",
         "Support for a wide range of DNS APIs (28+, including many provided via Posh-ACME).",
         "Support multiple auth config (e.g. mixing http and DNS validation, or using multiple DNS providers in one cert).",
-        "Extensive range of optional Deployment Tasks to perform scripting or to deploy to Apache, nginx, Azure Key Vault etc."
+        "Extensive range of optional Deployment Tasks to perform scripting or to deploy to Apache, nginx, Azure Key Vault etc.",
+        "Support Linux and macOS via the Certify Management Hub and Certify Management Agent products"
       ],
       "cons": [
-        "Currently only available on Windows.",
         "Commercial users require a license after their evaluation."
       ],
       "badges": [
@@ -156,7 +167,10 @@
         "No automated update notifications"
       ],
       "features": [
-        "custom-csr"
+        "http-01",
+        "dns-01",
+        "custom-csr",
+        "ipaddress"
       ],
       "badges": [
         "https://img.shields.io/github/stars/acmesh-official/acme.sh",
@@ -181,6 +195,13 @@
         "linux",
         "macOS"
       ],
+      "features": [
+        "http-01",
+        "dns-01",
+        "custom-csr",
+        "acme-ari",
+        "acme-profiles"
+      ],
       "pros": [
         "Official ACME tool recommended by Let's Encrypt",
         "Optimized for Linux, with built-in deployment options for Apache and nginx",
@@ -195,7 +216,7 @@
         "https://img.shields.io/github/last-commit/certbot/certbot"
       ]
     },
-       {
+    {
       "title": "getssl",
       "summary": "A client implemented as a Unix (bash) shell script.",
       "website": "https://github.com/srvrco/getssl",
@@ -238,6 +259,14 @@
         "linux",
         "other"
       ],
+      "features": [
+        "http-01",
+        "dns-01",
+        "custom-csr",
+        "acme-ari",
+        "acme-profiles",
+        "ipaddress"
+      ],
       "badges": [
         "https://img.shields.io/github/stars/go-acme/lego",
         "https://img.shields.io/github/last-commit/go-acme/lego"
@@ -261,6 +290,14 @@
         "windows",
         "linux",
         "macOS"
+      ],
+      "features": [
+        "http-01",
+        "dns-01",
+        "custom-csr",
+        "acme-ari",
+        "acme-profiles",
+        "ipaddress"
       ],
       "badges": [
         "https://img.shields.io/github/stars/rmbolger/Posh-ACME",
@@ -315,6 +352,15 @@
         "windows",
         "linux",
         "macOS"
+      ],
+      "features": [
+        "http-01",
+        "dns-01",
+        "multi-ca",
+        "ca-fallback",
+        "acme-ari",
+        "acme-profiles",
+        "ipaddress"
       ],
       "badges": [
         "https://img.shields.io/github/stars/caddyserver/caddy",
@@ -409,11 +455,18 @@
         "linux"
       ],
       "pros": [
-        "Easy to develop plugins",
+        "Terminal based client with a simple command line interface",
         "Support for 20+ DNS APIs"
       ],
       "cons": [
-        "Linux support still in beta"
+        
+      ],
+      "features": [
+        "http-01",
+        "dns-01",
+        "custom-csr",
+        "acme-ari",
+        "acme-profiles"
       ],
       "badges": [
         "https://img.shields.io/github/stars/simple-acme/simple-acme",

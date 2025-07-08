@@ -45,6 +45,10 @@
       "description": "Supports using a different certificate authority per certificate."
     },
     {
+      "key": "ipaddress",
+      "description": "Supports obtaining a certificate for an IP Address identifier."
+    },
+    {
       "key": "90-day",
       "description": "Supports using a custom Certificate Signing Request (CSR) generated from an external source."
     },
@@ -69,14 +73,16 @@
         "multi-san",
         "90-day",
         "ari",
-        "profiles"
+        "profiles",
+        "ipaddress"
       ],
       "pros": [
         "Free (zero cost) certificates",
         "Active support community"
       ],
       "cons": [
-        "Rate limits apply (users can apply for higher rate limits)"
+        "Rate limits apply (users can apply for higher rate limits)",
+        "IP address certificates currently only avilable on staging with shortlived profile"
       ]
     },
     {
