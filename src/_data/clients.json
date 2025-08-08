@@ -305,36 +305,6 @@
       ]
     },
     {
-      "title": "win-acme",
-      "website": "https://www.win-acme.com/",
-      "summary": "A client tool for the Windows command line.",
-      "docs": "https://www.win-acme.com/reference/cli",
-      "source": "https://github.com/win-acme/win-acme",
-      "community": "https://github.com/win-acme/win-acme/issues",
-      "categories": [
-        "cli",
-        "unmaintained"
-      ],
-      "tech": [
-        ".net",
-        "c#"
-      ],
-      "os": [
-        "windows"
-      ],
-      "badges": [
-        "https://img.shields.io/github/stars/win-acme/win-acme",
-        "https://img.shields.io/github/last-commit/win-acme/win-acme"
-      ],
-      "pros": [
-        "Optimized for Windows, with built-in deployment options for IIS",
-        "Plugins for multiple DNS providers"
-      ],
-      "cons": [
-        "No longer maintained by the main developer. Development has moved to the simple-acme fork."
-      ]
-    },
-    {
       "title": "Caddy",
       "summary": "Fast, multi-platform web server with automatic HTTPS",
       "website": "https://caddyserver.com/",
