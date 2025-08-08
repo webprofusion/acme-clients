@@ -10,7 +10,7 @@
       "key": "desktop",
       "description": "Tools with a Desktop UI"
     },
-        {
+    {
       "key": "web",
       "description": "Tools with a Web based UI"
     },
@@ -458,9 +458,7 @@
         "Terminal based client with a simple command line interface",
         "Support for 20+ DNS APIs"
       ],
-      "cons": [
-        
-      ],
+      "cons": [],
       "features": [
         "http-01",
         "dns-01",
@@ -478,7 +476,7 @@
       "summary": "A PHP based ACME Client designed for non-root access.",
       "description": "CertSage is a PHP script which can be installed on existing PHP sites. It is ideal if you are using a shared hosting plan that does not allow root access, such as shared hosting.",
       "website": "https://certsage.com",
-      "source": "https://certsage.com",
+      "source": "https://github.com/griffinsoftware/certsage",
       "docs": "https://certsage.com",
       "community": "https://community.letsencrypt.org/",
       "categories": [
@@ -497,6 +495,10 @@
       ],
       "cons": [
         "PHP 7+ enabled sites only"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/griffinsoftware/certsage",
+        "https://img.shields.io/github/last-commit/griffinsoftware/certsage"
       ]
     }
   ]
