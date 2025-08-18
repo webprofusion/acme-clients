@@ -89,28 +89,6 @@
         "IP address certificates currently only avilable on staging with shortlived profile"
       ]
     },
-   
-    {
-      "title": "BuyPass",
-      "summary": "ACME certificate authority, issuing free 180 day certificates with up to 5 subject names.",
-      "website": "https://www.buypass.com/",
-      "directories": [
-        "https://api.buypass.com/acme/directory"
-      ],
-      "features": [
-        "multi-san",
-        "180-day",
-        "ari"
-      ],
-      "pros": [
-        "Free (zero cost) certificates",
-        "Longer expiry (180 days) can be useful where deployment automation is limited"
-      ],
-      "cons": [
-        "Rate limits apply (hard - not user changeable)",
-        "Certificate feature are limited in comparison (SAN limit and no wildcards)"
-      ]
-    },
     {
       "title": "SSL.com",
       "summary": "ACME certificate authority, issuing free 90 day certificates including 1 subject name and a www. variant.",
