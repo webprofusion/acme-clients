@@ -174,7 +174,8 @@
         "An unlimited number of certificates can be issued for an account."
       ],
       "cons": [
-        "Certificates are limited to a single domain plus www"
+        "Certificates are limited to a single domain plus www",
+        "Requires external account binding (EAB) for account registration"
       ]
     }
   ]
