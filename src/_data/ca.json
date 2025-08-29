@@ -170,10 +170,11 @@
         "ari"
       ],
       "pros": [
-        "Suitable for european operators which require a CA based in Europe."
+        "Suitable for european operators which require a CA based in Europe.",
+        "An unlimited number of certificates can be issued for an account."
       ],
       "cons": [
-        "Limited free features compared to other CAs"
+        "Certificates are limited to a single domain plus www"
       ]
     }
   ]
