@@ -470,6 +470,47 @@
         "https://img.shields.io/github/stars/griffinsoftware/certsage",
         "https://img.shields.io/github/last-commit/griffinsoftware/certsage"
       ]
+    },
+    {
+      "title": "CertKit",
+      "summary": "Simplified SSL Certificate discovery, management, distribution and monitoring.",
+      "description": "CertKit is a deployable or SaaS SSL Certificate Management suite. Manage and monitor all your certificates from a single dashboard.",
+      "website": "https://www.certkit.io/",
+      "source": "https://github.com/certkit-io",
+      "docs": "https://www.certkit.io/",
+      "community": "https://www.reddit.com/r/certkit/",
+      "categories": [
+        "ui",
+        "web",
+        "api",
+        "supported",
+        "commercial"
+      ],
+      "tech": [
+        ".net"
+      ],
+      "os": [
+        "Docker",
+        "web"
+      ],
+      "features": [
+        "http-01",
+        "dns-01",
+        "multi-auth",
+        "multi-ca"
+      ],
+      "pros": [
+        "Centralized GUI dashboard for transparent certificate status and updates.",
+        "Managed service for reliability--so you don't have to.",
+        "Limited DNS delegation protects your brand.",
+        "Turnkey comprehensive SSL Certificate Management."
+      ],
+      "cons": [
+        "Commercial users require a license after their evaluation.",
+        "Product subject to changes while in Beta."
+      ],
+      "badges": [
+      ]
     }
   ]
 }
