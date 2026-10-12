@@ -442,6 +442,53 @@
       ]
     },
     {
+      "title": "acme-client-rs",
+      "summary": "A lightweight, single-binary ACME client written in Rust, with ARI and DNS-PERSIST-01 support.",
+      "description": "acme-client-rs implements the full RFC 8555 certificate lifecycle (account management, key rollover, ordering, validation, issuance, renewal and revocation) in one self-contained binary. The static musl Linux builds and the Windows build have no runtime dependencies, and a multi-arch container image (linux/amd64, linux/arm64, linux/arm/v7) is published on <a href=\"https://hub.docker.com/r/andrico21/acme-client-rs\" target=\"_blank\" class=\"underline\">Docker Hub</a>. Renewal is idempotent: re-running the same command with --days N or --ari only contacts the CA when renewal is due, so one cron job or systemd timer handles both issuance and renewal.",
+      "website": "https://github.com/andrico21/acme-client-rs",
+      "source": "https://github.com/andrico21/acme-client-rs",
+      "docs": "https://github.com/andrico21/acme-client-rs#readme",
+      "community": "https://github.com/andrico21/acme-client-rs/issues",
+      "categories": [
+        "cli"
+      ],
+      "tech": [
+        "rust"
+      ],
+      "os": [
+        "windows",
+        "linux",
+        "macOS",
+        "docker"
+      ],
+      "features": [
+        "http-01",
+        "dns-01",
+        "acme-ari",
+        "acme-profiles",
+        "ipaddress"
+      ],
+      "pros": [
+        "Single self-contained binary: static musl Linux builds (x86_64, ARM64, ARMv7, MIPS for OpenWrt/Entware routers) and the Windows build have no runtime dependencies; macOS builds are also provided",
+        "Multi-arch container image (linux/amd64, linux/arm64, linux/arm/v7) published on Docker Hub as andrico21/acme-client-rs",
+        "HTTP-01 (built-in server or webroot), DNS-01 (manual or hook script, with automatic propagation check), TLS-ALPN-01 and DNS-PERSIST-01 (IETF draft) challenges",
+        "Idempotent renewal from a single command, with server-guided timing via ARI (RFC 9773) and order replacement",
+        "External Account Binding (EAB), pre-authorization, account key rollover and revocation",
+        "Hook scripts and structured JSON output for scripting and CI/CD",
+        "Memory-safe Rust (unsafe code forbidden) with hardened release binaries"
+      ],
+      "cons": [
+        "No built-in DNS provider integrations: automating DNS-01 requires your own hook script",
+        "No built-in deployment integrations (web server configuration, PFX or Windows certificate store): deployment is done via hook scripts",
+        "No built-in TLS-ALPN-01 responder: you must serve the validation certificate yourself"
+      ],
+      "badges": [
+        "https://img.shields.io/github/stars/andrico21/acme-client-rs",
+        "https://img.shields.io/github/last-commit/andrico21/acme-client-rs",
+        "https://img.shields.io/docker/pulls/andrico21/acme-client-rs"
+      ]
+    },
+    {
       "title": "CertSage",
       "summary": "A PHP based ACME Client designed for non-root access.",
       "description": "CertSage is a PHP script which can be installed on existing PHP sites. It is ideal if you are using a shared hosting plan that does not allow root access, such as shared hosting.",
